@@ -753,22 +753,34 @@
               Veniam tempore temporibus accusantium delectus excepturi
               perferendis et.
             </p> -->
-            <div class="form-section">
+            <form class="form-section">
               <div class="upload-logo">
                 <label for="">Upload Logo</label>
                 <div class="dragdrop">
-                  <input type="file" name="myFile" class="drop-zone__input" />
+                  <div class="area">
+                    <input type="file" name="myFile" class="drop-zone__input" />
+                    <span>+</span>
+                  </div>
+                  <p>Drag & Drop or Select from device</p>
                 </div>
               </div>
-            </div>
+
+              <div class="basic-details">
+                div.
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </main>
 
+<<<<<<< HEAD
 
 
     
+=======
+    <div><p>test</p></div>
+>>>>>>> 6a79687422f1ec04706c7706bee3cd08122efa56
 
     <!-- jq cdn -->
     <script
@@ -800,7 +812,7 @@
     <!-- Drag & Drop js -->
     <script>
       document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
-        const dropZoneElement = inputElement.closest(".dragdrop");
+        const dropZoneElement = inputElement.closest(".area");
 
         dropZoneElement.addEventListener("click", (e) => {
           inputElement.click();
