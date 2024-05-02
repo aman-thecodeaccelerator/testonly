@@ -1,60 +1,58 @@
-
-
-
 section.client-form {
-    background: #f2f2f8;
-    padding: 32px 40px 32px 20px;
+  background: #f2f2f8;
+  padding: 32px 40px 32px 20px;
 }
 form {
-    background: #ffffff;
-    border: 1px solid #E5E5E5;
-    padding: 40px 20px;
-    border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 40px 20px;
+  border-radius: 8px;
 }
 form .two-col-field {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 form .form-control {
-	margin-bottom: 35px;
-	display: block;
-	width: 50%;
-	padding: 0 15px;
+  margin-bottom: 35px;
+  display: block;
+  width: 50%;
+  padding: 0 15px;
 }
 form label {
-	font-size: 14px;
-	color: #2C3053;
-	font-weight: 600;
-    margin-bottom: 16px;
+  font-size: 14px;
+  color: #2c3053;
+  font-weight: 600;
+  margin-bottom: 16px;
   display: block;
 }
 form input {
-	display: block;
-	background: #fff;
-	border: 1px solid #E8E9F3;
-	padding: 20px;
-	font-size: 14px;
-	font-weight: 500;
-	width: 100%;
-	border-radius: 7px;
+  display: block;
+  background: #fff;
+  border: 1px solid #e8e9f3;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 7px;
 }
 
-
 button {
-    background: #848ABD;
-    color: #ffffff;
-    margin-top: 30px;
-    padding: 12px 20px;
-    outline: none;
-    stroke: none;
-    border: none;
-    border-radius: 7px;
-    font-size: 14px;
+  background: #848abd;
+  color: #ffffff;
+  margin-top: 30px;
+  padding: 12px 20px;
+  outline: none;
+  stroke: none;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 0;
+  cursor: pointer;
 }
 
 button span img {
-	width: 14px;
-	vertical-align: middle;
-	margin-right: 10px;
+  width: 14px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
