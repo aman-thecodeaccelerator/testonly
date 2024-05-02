@@ -276,3 +276,77 @@ h6 {
   border-radius: 100%;
   margin-right: 12px;
 }
+
+/* Content css */
+.dashboard .navigation-with-content .main-content {
+  padding: 40px 20px;
+}
+.dashboard
+  .navigation-with-content
+  .main-content
+  .form-section
+  .upload-logo
+  label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 19px;
+  display: block;
+}
+.dashboard
+  .navigation-with-content
+  .main-content
+  .form-section
+  .upload-logo
+  .dragdrop {
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  border-radius: 8px;
+  padding: 47px 0px;
+  width: 100%;
+}
+
+.dashboard
+  .navigation-with-content
+  .main-content
+  .form-section
+  .upload-logo
+  .dragdrop
+  .drop-zone--over {
+  border-style: solid;
+}
+
+.dashboard
+  .navigation-with-content
+  .main-content
+  .form-section
+  .upload-logo
+  .dragdrop
+  .drop-zone__thumb {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+}
+
+.dashboard
+  .navigation-with-content
+  .main-content
+  .form-section
+  .upload-logo
+  .dragdrop
+  .drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
