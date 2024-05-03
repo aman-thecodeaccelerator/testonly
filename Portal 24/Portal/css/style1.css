@@ -2,13 +2,53 @@ body {
   font-size: 14px;
   font-weight: 500;
   line-height: 1;
+  background: #f2f2f8;
 }
-
-table {width: 100%;}
+.section-padding {
+  padding: 32px 40px 32px 20px;
+}
+table {
+  width: 100%;
+  border: 1px solid #E8E9F3;
+  border-collapse: collapse;
+  border-radius: 8px;
+  border-spacing: 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+table tr {
+  border-width: 1px 0px 1px 0px;
+  border-style: solid;
+  border-color: #F4F4F4;
+}
 table th {
   font-weight: 600;
   color: #2C3053;
   text-align: left;
+}
+table th, table td {
+  padding: 30px 20px 15px;
+}
+table tr td:first-child {
+  color: #17192B;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+table tr td {
+  color: #969696;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+table tr td:last-child {
+  text-align: right;
+}
+table tr td.symbol {
+  color: #2C3053;
+  font-weight: 600;
+}
+table tr td a img {
+  width: 18px;
+  margin-left: 15px;
 }
 table th span img {
   width: 6px;
@@ -26,10 +66,9 @@ table th span img {
   font-size: 18px;
   font-weight: 400;
 }
-section.client-form {
-  background: #f2f2f8;
+/* section.client-form {
   padding: 32px 40px 32px 20px;
-}
+} */
 form {
   background: #ffffff;
   border: 1px solid #e5e5e5;
@@ -115,11 +154,12 @@ button span img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 46px 40px 20px 20px;
+    padding: 0px 0px 20px 0px;
 }
   .currency-section form {
     padding: 0;
     border: none;
+    background: transparent;
 }
   .currency-section form select {
     font-weight: 600;
@@ -142,3 +182,43 @@ button span img {
   text-transform: capitalize;
   margin: 0 8px 0 0px;
 }
+
+/* pagination-css-start */
+.pagination-col {
+  margin-top: 30px;
+}
+.pagination-col .content-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.pagination-col .content-area p {
+  color: #707070;
+  text-transform: capitalize;
+}
+.pagination a {
+  color: #707070;
+  padding: 7px 12px;
+  text-decoration: none;
+  transition: background-color .3s;
+  background: #E8E9F3;
+  border-radius: 2px;
+  margin: 0 5px;
+}
+
+.pagination a.active {
+  background-color: #848ABD;
+  color: white;
+}
+.pagination p {
+  display: inline-block;
+}
+.pagination a:first-child {
+  margin-left: 10px;
+}
+.pagination a:last-child {
+  margin-right: 10px;
+}
+
+/* pagination-css-end */
