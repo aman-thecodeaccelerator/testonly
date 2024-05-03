@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Edit Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <section class="client-form section-padding">
+        <form>
+            <div class="two-col-field">
+                <div class="form-control">
+                    <label for="country-name">Country Name</label>
+                    <input type="text" id="country-name" name="country-name" value="India">
+                </div>
+            
+                <div class="form-control">
+                    <label for="currency-name">Currency Name</label>
+                    <input type="text" id="currency-name" name="currency-name" value="India Rupee">
+                </div>
+            </div>
+
+            <div class="two-col-field">
+                <div class="form-control">
+                    <label for="currency-code">Currency Code</label>
+                    <input type="text" id="currency-code" name="currency-code" value="INR">
+                </div>
+
+                <div class="form-control">
+                    <label for="symbol">Currency Symbols <span>(HTML Unicode UTF-8)</span></label>
+                    <input type="text" id="symbol" name="symbol" value="&#8377;">
+                </div>
+            </div>
+                        
+          </form>
+
+          <button type="submit"><span><img src="images/cta-icon.svg"></span>Update</button>
+    </section>
+
+    <section class="popup">
+        <div class="popup__content">          
+            <img src="images/success-icon.svg">
+            <h2>Your data has successfully submitted !</h2>
+            <a id="popup-close" class="done" href="javascript:void(0);">Continue<span id="countDown"></span></a>          
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+$("button").click(function() {
+  $(".popup").fadeIn(500);
+});
+$(".done").click(function() {
+  $(".popup").fadeOut(500);
+});
+</script>
+
+<script>
+    $(document).ready(function () {
+  // When site loaded, load the Popupbox First
+  new popup($(".popup"), $("#container")).load();
+});
+function popup(popup, container) {
+  var thisPopup = this,
+    timer,
+    counter = 5,
+    countDown = $("#countDown").text(counter.toString());
+
+  thisPopup.load = function () {
+    container.animate(
+      {
+        opacity: "0.3"
+      },
+      250,
+      function () {
+        popup.fadeIn("250");
+      }
+    );
+
+    container.off("click").on("click", function () {
+      thisPopup.unload();
+    });
+
+    $("#popup-close")
+      .off("click")
+      .on("click", function () {
+        thisPopup.unload();
+      });
+
+    timer = setInterval(function () {
+      counter--;
+      if (counter < 0) {
+        thisPopup.unload();
+      } else {
+        countDown.text(counter.toString());
+      }
+    }, 1000);
+  };
+
+  thisPopup.unload = function () {
+    clearInterval(timer);
+
+    popup.fadeOut("250", function () {
+      container.animate(
+        {
+          opacity: "1"
+        },
+        250
+      );
+    });
+  };
+}
+</script>
+
+</body>
+</html>
