@@ -517,6 +517,9 @@ form textarea::placeholder {
   overflow: hidden;
   overflow-x: scroll;
 }
+.dataTable-wrapper.no-footer .dataTable-container::-webkit-scrollbar {
+  display: none;
+}
 .dataTable-bottom,
 .dataTable-top {
   display: flex;
@@ -725,7 +728,7 @@ form textarea::placeholder {
 .dataTable-sorter::after {
   border-bottom: 7px solid #a2a2a2;
   border-top: 4px solid transparent;
-  top: -3px;
+  top: -5px;
 }
 .asc .dataTable-sorter::after,
 .desc .dataTable-sorter::before {
