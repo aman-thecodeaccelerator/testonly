@@ -29,8 +29,8 @@ table th {
 table th, table td {
   padding: 30px 20px 15px;
 }*/
-.currency-section .dataTable-table tbody tr td:first-child, .currency-section .dataTable-table tbody tr td:first-child {
-  color: #17192B;
+.currency-section .dataTable-table tbody tr td:first-child {
+  color: #17192b;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -63,7 +63,7 @@ table td:first-child {
   text-align: right;
 } */
 .currency-section table tr td.symbol {
-  color: #2C3053;
+  color: #2c3053;
   font-weight: 600;
 }
 .currency-section table tr td a img, .invoice-section table tr td a img, .company-section table tr td a img {
@@ -76,7 +76,7 @@ table td:first-child {
   margin-right: 10px;
 }  */
 .add-new-cta {
-  background: #848ABD;
+  background: #848abd;
   border-radius: 7px;
   padding: 13px 20px;
   color: #ffffff;
@@ -117,7 +117,9 @@ form label {
   margin-bottom: 16px;
   display: block;
 }
-form input, form select, form textarea {
+form input,
+form select,
+form textarea {
   display: block;
   background: #fff;
   border: 1px solid #e8e9f3;
@@ -152,31 +154,31 @@ button {
   stroke: none;
   border: none;
   border-radius: 7px;
-  line-height: 0;
+  line-height: 1;
   cursor: pointer;
 }
 
 button span img {
-	width: 14px;
-	vertical-align: middle;
-	margin-right: 10px;
+  width: 14px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 .search-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .search-bar #search {
-    border: 1px solid #E5E5E5;
-    border-radius: 7px;
-    padding: 13px 15px;
-    color: #494949;
-    font-size: 14px;
-    outline: none;
-    width: 50%;
-    min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar #search {
+  border: 1px solid #e5e5e5;
+  border-radius: 7px;
+  padding: 13px 15px;
+  color: #494949;
+  font-size: 14px;
+  outline: none;
+  width: 50%;
+  min-width: 300px;
 }
 .search-bar label {
   display: inline-block;
@@ -184,12 +186,12 @@ button span img {
   text-transform: capitalize;
   margin: 0 8px 0 0px;
 }
-  
+
 .search-bar [list]::-webkit-list-button,
 .search-bar [list]::-webkit-calendar-picker-indicator {
   display: none !important;
 }
-  
+
 .search-display {
   text-align: center;
 }
@@ -250,14 +252,14 @@ button span img {
   color: #707070;
   padding: 7px 12px;
   text-decoration: none;
-  transition: background-color .3s;
-  background: #E8E9F3;
+  transition: background-color 0.3s;
+  background: #e8e9f3;
   border-radius: 2px;
   margin: 0 5px;
 }
 
 .pagination a.active {
-  background-color: #848ABD;
+  background-color: #848abd;
   color: white;
 }
 .pagination p {
@@ -309,7 +311,7 @@ button span img {
   line-height: 1.4;
 }
 .popup .popup__content a.done {
-  background: #32B53F;
+  background: #32b53f;
   border-radius: 60px;
   padding: 10px 20px;
   display: inline-block;
@@ -327,22 +329,22 @@ button span img {
   padding: 68px;
   background: #ffffff;
   border-radius: 8px;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #e5e5e5;
 }
 .two-col-content-with-cta {
   --bs-gutter-x: -1.5rem;
   --bs-gutter-y: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(var(--bs-gutter-x)/2);
-  margin-right: calc(var(--bs-gutter-x)/2);
+  margin-left: calc(var(--bs-gutter-x) / 2);
+  margin-right: calc(var(--bs-gutter-x) / 2);
   box-sizing: border-box;
   margin-bottom: 20px;
 }
 .two-col-content-with-cta > * {
   max-width: 100%;
-  padding-left: calc(var(--bs-gutter-x)/-2);
-  padding-right: calc(var(--bs-gutter-x)/-2);
+  padding-left: calc(var(--bs-gutter-x) / -2);
+  padding-right: calc(var(--bs-gutter-x) / -2);
   box-sizing: border-box;
   width: 50%;
   text-align: center;
@@ -354,9 +356,9 @@ button span img {
 }
 .two-col-content-with-cta .invoice-col .spacer .invoice-cta {
   font-size: 15px;
-  color: #17192B;
+  color: #17192b;
   padding: 18px 96px;
-  background: #E8E9F3;
+  background: #e8e9f3;
   border-radius: 7px;
   display: inline-block;
 }
@@ -366,7 +368,13 @@ button span img {
   margin-right: 10px;
 }
 
+<<<<<<< HEAD
 
 .invoice-table .dataTable-top, .invoice-table .dataTable-bottom {
   display: none;
 }
+=======
+/* .invoice-table .dataTable-top, .invoice-table .dataTable-bottom {
+  display: none;
+} */
+>>>>>>> d8126beb6a1a765ab2cf42b347119fc23c87b41b

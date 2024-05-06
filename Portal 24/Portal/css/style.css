@@ -869,4 +869,101 @@ form textarea::placeholder {
 
 /* GST Form Css */
 .gst-form {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+}
+
+.gst-form .form-control {
+  position: relative;
+}
+
+.gst-form .basic-info,
+.gst-form .add-row-section,
+.gst-form .total-amount {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 35px 3px 40px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.gst-form .basic-info .add-more {
+  color: #707070;
+  font-size: 25px;
+  height: max-content;
+  background: #fff;
+  border: 1px solid #e8e9f3;
+  padding: 17px 18px 15px;
+  line-height: 1;
+}
+.gst-form .basic-info select {
+  outline: none;
+  /* margin-right: 8px;
+  position: relative;
+  background-image: url("images/s-drop.svg");
+  background-repeat: no-repeat;
+  background-position-x: 87%;
+  background-position-y: 50%;
+  background-size: 17px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: ""; */
+  cursor: pointer;
+}
+
+.gst-form .total-amount {
+  max-width: 532px;
+  padding: 20px 0px;
+}
+.gst-form .form-control .date-bar {
+  padding-right: 40px;
+}
+.gst-form .form-control .calendar-icon {
+  position: absolute;
+  right: 31px;
+  bottom: 19px;
+}
+.gst-form .total-amount .top-lable,
+.gst-form .total-amount .title-input {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 13px;
+  padding-bottom: 13px;
+}
+
+.gst-form .total-amount .title-input {
+  border-bottom: 1px solid #e8e9f3;
+}
+.gst-form .total-amount .title-input:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: 0;
+}
+.gst-form .total-amount label {
+  margin: 0;
+}
+.gst-form .total-amount .title-input label {
+  padding-right: 10px;
+}
+
+.gst-form .total-amount input {
+  max-width: 330px;
+  padding: 15px 20px;
+}
+
+.gst-form .cta-box {
+  display: flex;
+  align-items: center;
+}
+
+.gst-form .cta-box .preview-cta {
+  padding: 13px 20px;
+  background: #e8e9f3;
+  color: #2c3053;
+  font-weight: 500;
+  margin-left: 10px;
 }
