@@ -1,5 +1,7 @@
 //  Mneu js
 
+const { json } = require("react-router-dom");
+
 $(document).ready(function() {
   $(".title").click(function() {
     var target = $(this)
