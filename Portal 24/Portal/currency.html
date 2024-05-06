@@ -441,35 +441,26 @@
         </div>
 
     <section class="currency-section section-padding">
-        <div class="top-bar">
-            <div class="select-bar">
-                <form action="/action_page.php">
-                    
-                    <select>
-                      <option value="10">10</option>
-                      <option value="20">20</option>
-                      <option value="30">30</option>
-                      <option value="40">40</option>
-                      <option value="50">50</option>
-                    </select>
-                    <label for="cars">entries per page</label>
-                  </form>
-            </div>
-            <div class="search-bar">
-                <label for="search">Search:</label>
-                <input id="search" type="search" placeholder="Code Accelerator" list="search-suggestions" autocomplete="off"/>
-                <a class="add-new-cta" href="javascript:void(0);"><span>+</span> Add New</a>
-            </div>
-        </div>
+      <div class="main-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="add-btn">
+                <button type="button">+ Add New</button>
+              </div>
+
 
         <div class="currency-table">
             <table>
+              <thead>
                 <tr>
-                    <th><span><img src="images/select-arrows.svg"></span>Country</th>
-                    <th><span><img src="images/select-arrows.svg"></span>Currency Name</th>
-                    <th><span><img src="images/select-arrows.svg"></span>Currency Code</th>
-                    <th><span><img src="images/select-arrows.svg"></span>Currency</th>
+                    <th>Country</th>
+                    <th>Currency Name</th>
+                    <th>Currency Code</th>
+                    <th>Currency</th>
                 </tr>
+              </thead>
+              <tbody>
                 <tr>
                     <td>India</td>
                     <td>India Rupee</td>
@@ -500,10 +491,16 @@
                         <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
                     </td>
                 </tr>
+              </tbody>
             </table>
         </div>
 
-        <div class="pagination-col">
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- <div class="pagination-col">
           <div class="content-area">
             <p>Showing 1 to 10 of 57 entries</p>
             <div class="pagination">
@@ -517,12 +514,90 @@
               <p><a href="#"><span><img src="images/next.svg"></span></a>Next</p>
             </div>
           </div>
-        </div>
+        </div> -->
     </section>
 
     </div>
   </div>
 </main>
+
+
+<script
+src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/moment.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.js"></script>
+<script src="https://unpkg.com/vanilla-datatables-editable@0.0.10/datatable.editable.min.js"></script>
+
+<!-- Mneu js -->
+<script>
+$(document).ready(function() {
+  $(".title").click(function() {
+    var target = $(this)
+      .parent()
+      .children(".list-items");
+    $(target).slideToggle();
+  });
+});
+</script>
+
+<!-- Profile Dropdown -->
+<script>
+$(document).ready(function() {
+  $(".admin").click(function() {
+    $(".user-drop").slideToggle();
+  });
+});
+</script>
+<!-- Sidebar items active -->
+<script>
+$(document).ready(function() {
+  $(".space .list-items li a").on("click", function() {
+    $(".space .list-items li a").removeClass("active");
+    $(this).addClass("active");
+  });
+});
+</script>
+
+<!-- Table js -->
+<script>
+// Instantiate
+var datatable = new DataTable("table", {
+  plugins: {
+    editable: {
+      enabled: true,
+      contextMenu: true,
+      hiddenColumns: true,
+      menuItems: [
+        {
+          text: "<span class='mdi mdi-lead-pencil'></span> Edit Cell",
+          action: function() {
+            this.editCell();
+          },
+        },
+        {
+          text: "<span class='mdi mdi-lead-pencil'></span> Edit Row",
+          action: function() {
+            this.editRow();
+          },
+        },
+        {
+          separator: true,
+        },
+        {
+          text: "<span class='mdi mdi-delete'></span> Remove",
+          action: function() {
+            if (confirm("Are you sure?")) {
+              this.removeRow();
+            }
+          },
+        },
+      ],
+    },
+  },
+});
+
+</script>
+
 
     
 <script>
