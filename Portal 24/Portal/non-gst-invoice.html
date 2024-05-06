@@ -453,7 +453,7 @@
                       <option value="2">2</option>
                     </select>
                   </div>
-
+                  <button type="button" class="add-more">+</button>
                   <div class="form-control">
                     <label for="companyname">Invoice Number</label>
                     <input type="text" placeholder="1234567890" />
@@ -462,7 +462,16 @@
                 <div class="two-col-field">
                   <div class="form-control">
                     <label for="name">Date</label>
-                    <input type="text" placeholder="17-04-24" />
+                    <input
+                      class="date-bar"
+                      type="text"
+                      placeholder="17-04-24"
+                    />
+                    <img
+                      class="calendar-icon"
+                      src="images/calendar.svg"
+                      alt="calendar"
+                    />
                   </div>
 
                   <div class="form-control">
@@ -491,6 +500,46 @@
                     <input type="text" placeholder="Enter amount" />
                   </div>
                 </div>
+                <div class="two-col-field">
+                  <div class="form-control">
+                    <input type="text" placeholder="Select client" />
+                  </div>
+
+                  <div class="form-control">
+                    <input type="text" placeholder="Enter HSN/SAC" />
+                  </div>
+                  <div class="form-control">
+                    <input type="text" placeholder="Enter amount" />
+                  </div>
+                </div>
+              </div>
+              <div class="total-amount">
+                <div class="top-lable">
+                  <label for="">Amount Chargeable</label>
+                  <label for="">E. & O.E</label>
+                </div>
+                <div class="title-input">
+                  <label for="">Total :</label>
+                  <input type="text" placeholder="$ 120" />
+                </div>
+                <div class="title-input">
+                  <label for="">Received In Advance :</label>
+                  <input type="text" placeholder="$ 20" />
+                </div>
+                <div class="title-input">
+                  <label for="">Remaining Amount :</label>
+                  <input type="text" placeholder="$ 100" />
+                </div>
+              </div>
+
+              <div class="cta-box">
+                <button type="submit">
+                  <span><img src="images/cta-icon.svg" alt="cta-icon"/></span
+                  >Save
+                </button>
+                <button type="submit" class="preview-cta">
+                  <span><img src="images/pre.svg" alt="pre"/></span>Preview
+                </button>
               </div>
             </form>
           </div>
