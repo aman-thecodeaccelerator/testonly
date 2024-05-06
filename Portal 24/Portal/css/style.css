@@ -866,3 +866,7 @@ form textarea::placeholder {
   color: #707070;
   margin-left: 10px;
 }
+
+/* GST Form Css */
+.gst-form {
+}
