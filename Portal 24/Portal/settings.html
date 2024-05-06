@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style1.css" />
-    <title>Clients Add</title>
+    <title>Settings</title>
   </head>
   <body>
     <main>
@@ -387,7 +387,7 @@
           <div class="navigation-section">
             <div class="main">
               <div class="title">
-                <h4>Client</h4>
+                <h4>Settings</h4>
               </div>
               <div class="profile-notification">
                 <ul class="nav">
@@ -442,39 +442,106 @@
 
           <!-- Content -->
           <div class="main-content">
-            <form action="">
-              <div class="two-col-field">
-                <div class="form-control">
-                  <label for="name">Client Name</label>
-                  <input type="text" placeholder="Enter client name" />
+            <form class="form-section">
+              <div class="upload-logo">
+                <label for="">Upload Logo</label>
+                <div class="dragdrop">
+                  <div class="area">
+                    <input type="file" name="myFile" class="drop-zone__input" />
+                    <span>+</span>
+                  </div>
+                  <p>Drag & Drop or Select from device</p>
+                </div>
+              </div>
+
+              <div class="basic-details">
+                <div class="two-col-field">
+                  <div class="form-control">
+                    <label for="">Company Name</label>
+                    <input type="text" placeholder="Enter company name" />
+                  </div>
+                  <div class="form-control">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Enter email address" />
+                  </div>
+                </div>
+                <div class="sin-fields">
+                  <div class="address">
+                    <label for="">Address</label>
+                    <textarea
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="5"
+                      placeholder="Enter address"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="two-col-field">
+                  <div class="form-control">
+                    <label for="">GSTIN/UIN</label>
+                    <input type="text" placeholder="GSTIN/UIN" />
+                  </div>
+                  <div class="form-control">
+                    <label for="">CIN</label>
+                    <input type="text" placeholder="CIN" />
+                  </div>
+                </div>
+                <div class="two-col-field">
+                  <div class="form-control">
+                    <label for="">LUT Number</label>
+                    <input type="text" placeholder="Enter LUT number" />
+                  </div>
+                  <div class="form-control">
+                    <label for="">IEC Number</label>
+                    <input type="text" placeholder="Enter IEC number" />
+                  </div>
+                </div>
+              </div>
+              <label for="name">Bank Details</label>
+              <div class="basic-details">
+                <div class="two-col-field">
+                  <div class="form-control">
+                    <label for="">Bank Name</label>
+                    <input type="text" placeholder=" Enter bank name" />
+                  </div>
+                  <div class="form-control">
+                    <label for="">Account Number</label>
+                    <input type="text" placeholder=" Enter Account number" />
+                  </div>
                 </div>
 
-                <div class="form-control">
-                  <label for="companyname">Company Name</label>
-                  <input type="text" placeholder="Enter company name" />
+                <div class="two-col-field">
+                  <div class="form-control">
+                    <label for="">IFSC Code</label>
+                    <input type="text" placeholder=" Enter IFSC code" />
+                  </div>
+                  <div class="form-control">
+                    <label for="">SWIFT Code</label>
+                    <input type="text" placeholder=" Enter SWIFT code" />
+                  </div>
+                </div>
+                <div class="two-col-field">
+                  <div class="form-control">
+                    <label for="">Branch Name</label>
+                    <input type="text" placeholder=" Enter branch name" />
+                  </div>
                 </div>
               </div>
-              <div class="two-col-field">
-                <div class="form-control">
-                  <label for="name">Email</label>
-                  <input type="text" placeholder="Enter email address" />
-                </div>
-
-                <div class="form-control">
-                  <label for="companyname">CIN</label>
-                  <input type="text" placeholder="CIN" />
-                </div>
-              </div>
-              <div class="two-col-field">
-                <div class="form-control">
-                  <label for="name">GSTIN/UIN</label>
-                  <input type="text" placeholder="Enter GSTIN/UIN" />
+              <label for="name">Authorized Signature</label>
+              <div class="upload-logo">
+                <div class="dragdrop">
+                  <div class="area">
+                    <input type="file" name="myFile" class="drop-zone__input" />
+                    <span>+</span>
+                  </div>
+                  <p>Drag & Drop or Select from device</p>
                 </div>
               </div>
+              <button type="submit" fdprocessedid="looiil">
+                <span><img src="images/cta-icon.svg"/></span>Update
+              </button>
             </form>
-            <button type="submit">
-              <span><img src="images/cta-icon.svg"/></span>Save
-            </button>
           </div>
         </div>
       </div>
@@ -504,6 +571,83 @@
           $(".user-drop").slideToggle();
         });
       });
+    </script>
+
+    <!-- Drag & Drop js -->
+    <script>
+      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+        const dropZoneElement = inputElement.closest(".area");
+
+        dropZoneElement.addEventListener("click", (e) => {
+          inputElement.click();
+        });
+
+        inputElement.addEventListener("change", (e) => {
+          if (inputElement.files.length) {
+            updateThumbnail(dropZoneElement, inputElement.files[0]);
+          }
+        });
+
+        dropZoneElement.addEventListener("dragover", (e) => {
+          e.preventDefault();
+          dropZoneElement.classList.add("drop-zone--over");
+        });
+
+        ["dragleave", "dragend"].forEach((type) => {
+          dropZoneElement.addEventListener(type, (e) => {
+            dropZoneElement.classList.remove("drop-zone--over");
+          });
+        });
+
+        dropZoneElement.addEventListener("drop", (e) => {
+          e.preventDefault();
+
+          if (e.dataTransfer.files.length) {
+            inputElement.files = e.dataTransfer.files;
+            updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+          }
+
+          dropZoneElement.classList.remove("drop-zone--over");
+        });
+      });
+
+      /**
+       * Updates the thumbnail on a drop zone element.
+       *
+       * @param {HTMLElement} dropZoneElement
+       * @param {File} file
+       */
+      function updateThumbnail(dropZoneElement, file) {
+        let thumbnailElement = dropZoneElement.querySelector(
+          ".drop-zone__thumb"
+        );
+
+        // First time - remove the prompt
+        if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+          dropZoneElement.querySelector(".drop-zone__prompt").remove();
+        }
+
+        // First time - there is no thumbnail element, so lets create it
+        if (!thumbnailElement) {
+          thumbnailElement = document.createElement("div");
+          thumbnailElement.classList.add("drop-zone__thumb");
+          dropZoneElement.appendChild(thumbnailElement);
+        }
+
+        thumbnailElement.dataset.label = file.name;
+
+        // Show thumbnail for image files
+        if (file.type.startsWith("image/")) {
+          const reader = new FileReader();
+
+          reader.readAsDataURL(file);
+          reader.onload = () => {
+            thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+          };
+        } else {
+          thumbnailElement.style.backgroundImage = null;
+        }
+      }
     </script>
 
     <!-- Sidebar items active -->

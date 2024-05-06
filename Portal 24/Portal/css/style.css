@@ -747,17 +747,17 @@ form textarea::placeholder {
   color: #969696;
 }
 
-.dashboard .navigation-with-content .main-content .col-md-12 {
+.main-content .col-md-12 {
   position: relative;
 }
 
-.dashboard .navigation-with-content .main-content .col-md-12 .add-btn {
+.main-content .col-md-12 .add-btn {
   position: absolute;
   top: 0px;
   right: 12px;
   z-index: 10;
 }
-.dashboard .navigation-with-content .main-content .col-md-12 .add-btn button {
+.main-content .col-md-12 .add-btn button {
   padding: 11px 20px;
   margin: 0;
   line-height: 1.5;
