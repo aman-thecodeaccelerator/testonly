@@ -29,12 +29,12 @@ table th {
 table th, table td {
   padding: 30px 20px 15px;
 }*/
-.dataTable-table tbody tr td:first-child {
+.currency-section .dataTable-table tbody tr td:first-child {
   color: #17192B;
   padding-left: 20px;
   padding-right: 20px;
 }
-.dataTable-table tbody tr td {
+.currency-section .dataTable-table tbody tr td {
   color: #969696;
   padding-left: 32px;
   padding-right: 32px;
@@ -42,11 +42,11 @@ table th, table td {
 /* table tr td:last-child {
   text-align: right;
 } */
-table tr td.symbol {
+.currency-section table tr td.symbol {
   color: #2C3053;
   font-weight: 600;
 }
-table tr td a img {
+.currency-section table tr td a img {
   width: 18px;
   margin-left: 15px;
 }
@@ -345,3 +345,10 @@ button span img {
   width: 20px;
   margin-right: 10px;
 }
+
+
+
+
+/* .invoice-table .dataTable-top, .invoice-table .dataTable-bottom {
+  display: none;
+} */
