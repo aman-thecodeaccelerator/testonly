@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Edit Page</title>
+    <title>Invoice page</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
-
+    
     <main>
         <div class="dashboard">
           <!-- Sidebar -->
@@ -388,7 +388,7 @@
             <div class="navigation-section">
               <div class="main">
                 <div class="title">
-                  <h4>Currency</h4>
+                  <h4>Invoice</h4>
                 </div>
                 <div class="profile-notification">
                   <ul class="nav">
@@ -441,47 +441,202 @@
               </div>
             </div>
 
-    <section class="client-form section-padding">
-        <form>
-            <div class="two-col-field">
-                <div class="form-control">
-                    <label for="name">Client Name</label>
-                    <input type="text" id="name" name="name" value="Monkey D Garp">
-                </div>
+
+    <section class="currency-section section-padding">
+        <!-- <div class="top-bar">
+            <div class="select-bar">
+                <form action="/action_page.php">
+                    
+                    <select>
+                      <option value="10">10</option>
+                      <option value="20">20</option>
+                      <option value="30">30</option>
+                      <option value="40">40</option>
+                      <option value="50">50</option>
+                    </select>
+                    <label for="cars">entries per page</label>
+                  </form>
+            </div>
+            <div class="search-bar">
+                <label for="search">Search:</label>
+                <input id="search" type="search" placeholder="Code Accelerator" list="search-suggestions" autocomplete="off"/>
+                <a class="add-new-cta" href="currency-add-new-page.html"><span>+</span> Add New</a>
+            </div>
+        </div> -->
+
+        <div class="two-col-content-with-cta">
             
-                <div class="form-control">
-                    <label for="companyname">Company Name</label>
-                    <input type="text" id="companyname" name="companyname" value="Code Accelerator Private Limited">
+                <div class="invoice-col">
+                    <div class="spacer">
+                        <div class="non-gst-invoice">
+                            <h4>Non GST Invoice</h4>
+                            <a class="invoice-cta" href="javascript:void(0);"><span><img src="images/add-invoice-icon.svg"></span>Create New</a>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="invoice-col">
+                    <div class="spacer">
+                        <div class="gst-invoice">
+                            <h4>GST Invoice</h4>
+                            <a class="invoice-cta" href="javascript:void(0);"><span><img src="images/add-invoice-icon.svg"></span>Create New</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="invoice-table">
+            <table>
+                <tr>
+                    <th><span><img src="images/select-arrows.svg"></span>Client Name</th>
+                    <th><span><img src="images/select-arrows.svg"></span>Company Name</th>
+                    <th><span><img src="images/select-arrows.svg"></span>Invoice Number</th>
+                    <th><span><img src="images/select-arrows.svg"></span>Date</th>
+                    <th><span><img src="images/select-arrows.svg"></span>Amount Payable</th>
+                </tr>
+                <tr>
+                    <td>monkey d garp</td>
+                    <td>Code Accelerator Private Limited</td>
+                    <td>CAPL242512345678</td>
+                    <td>15-04-2024</td>
+                    <td>₹ 4440/-</td>
+                    <td>
+                        <a href="invoice-edit-page.html"><img src="images/export-icon.svg"></a>
+                        <a href="invoice-edit-page.html"><img src="images/edit-icon.svg"></a>
+                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>monkey d garp</td>
+                    <td>Code Accelerator Private Limited</td>
+                    <td>CAPL242512345678</td>
+                    <td>15-04-2024</td>
+                    <td>₹ 4440/-</td>
+                    <td>
+                        <a href="invoice-edit-page.html"><img src="images/export-icon.svg"></a>
+                        <a href="invoice-edit-page.html"><img src="images/edit-icon.svg"></a>
+                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>monkey d garp</td>
+                    <td>Code Accelerator Private Limited</td>
+                    <td>CAPL242512345678</td>
+                    <td>15-04-2024</td>
+                    <td>₹ 4440/-</td>
+                    <td>
+                        <a href="invoice-edit-page.html"><img src="images/export-icon.svg"></a>
+                        <a href="invoice-edit-page.html"><img src="images/edit-icon.svg"></a>
+                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>monkey d garp</td>
+                    <td>Code Accelerator Private Limited</td>
+                    <td>CAPL242512345678</td>
+                    <td>15-04-2024</td>
+                    <td>₹ 4440/-</td>
+                    <td>
+                        <a href="invoice-edit-page.html"><img src="images/export-icon.svg"></a>
+                        <a href="invoice-edit-page.html"><img src="images/edit-icon.svg"></a>
+                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>monkey d garp</td>
+                    <td>Code Accelerator Private Limited</td>
+                    <td>CAPL242512345678</td>
+                    <td>15-04-2024</td>
+                    <td>₹ 4440/-</td>
+                    <td>
+                        <a href="invoice-edit-page.html"><img src="images/export-icon.svg"></a>
+                        <a href="invoice-edit-page.html"><img src="images/edit-icon.svg"></a>
+                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>monkey d garp</td>
+                    <td>Code Accelerator Private Limited</td>
+                    <td>CAPL242512345678</td>
+                    <td>15-04-2024</td>
+                    <td>₹ 4440/-</td>
+                    <td>
+                        <a href="invoice-edit-page.html"><img src="images/export-icon.svg"></a>
+                        <a href="invoice-edit-page.html"><img src="images/edit-icon.svg"></a>
+                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>monkey d garp</td>
+                    <td>Code Accelerator Private Limited</td>
+                    <td>CAPL242512345678</td>
+                    <td>15-04-2024</td>
+                    <td>₹ 4440/-</td>
+                    <td>
+                        <a href="invoice-edit-page.html"><img src="images/export-icon.svg"></a>
+                        <a href="invoice-edit-page.html"><img src="images/edit-icon.svg"></a>
+                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>monkey d garp</td>
+                    <td>Code Accelerator Private Limited</td>
+                    <td>CAPL242512345678</td>
+                    <td>15-04-2024</td>
+                    <td>₹ 4440/-</td>
+                    <td>
+                        <a href="invoice-edit-page.html"><img src="images/export-icon.svg"></a>
+                        <a href="invoice-edit-page.html"><img src="images/edit-icon.svg"></a>
+                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>monkey d garp</td>
+                    <td>Code Accelerator Private Limited</td>
+                    <td>CAPL242512345678</td>
+                    <td>15-04-2024</td>
+                    <td>₹ 4440/-</td>
+                    <td>
+                        <a href="invoice-edit-page.html"><img src="images/export-icon.svg"></a>
+                        <a href="invoice-edit-page.html"><img src="images/edit-icon.svg"></a>
+                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>monkey d garp</td>
+                    <td>Code Accelerator Private Limited</td>
+                    <td>CAPL242512345678</td>
+                    <td>15-04-2024</td>
+                    <td>₹ 4440/-</td>
+                    <td>
+                        <a href="invoice-edit-page.html"><img src="images/export-icon.svg"></a>
+                        <a href="invoice-edit-page.html"><img src="images/edit-icon.svg"></a>
+                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- <div class="pagination-col">
+          <div class="content-area">
+            <p>Showing 1 to 10 of 57 entries</p>
+            <div class="pagination">
+              <p>Pre.<a href="#"><span><img src="images/prev.svg"></span></a></p>
+              <a class="active" href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <p><a href="#"><span><img src="images/next.svg"></span></a>Next</p>
             </div>
-
-            <div class="two-col-field">
-                <div class="form-control">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" value="accounts@thecodeaccelerator.com">
-                </div>
-
-                <div class="form-control">
-                    <label for="cin">CIN</label>
-                    <input type="text" id="cin" name="cin" value="U72900RJ2021PTC076511">
-                </div>
-            </div>
-
-            <div class="two-col-field">
-                <div class="form-control">
-                    <label for="gstin">GSTIN/UIN</label>
-                    <input type="text" id="gstin" name="gstin" value="08AAJCC7027P1Z3">
-                </div>
-            </div>
-                        
-          </form>
-
-          <button type="submit"><span><img src="images/cta-icon.svg"></span>Update</button>
+          </div>
+        </div> -->
     </section>
-
     </div>
 </div>
 </main>
+
 
 </body>
 </html>

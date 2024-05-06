@@ -7,7 +7,7 @@ body {
 .section-padding {
   padding: 32px 40px 32px 20px;
 }
-table {
+/* table {
   width: 100%;
   border: 1px solid #E8E9F3;
   border-collapse: collapse;
@@ -28,20 +28,20 @@ table th {
 }
 table th, table td {
   padding: 30px 20px 15px;
-}
-table tr td:first-child {
+}*/
+.dataTable-table tbody tr td:first-child {
   color: #17192B;
   padding-left: 20px;
   padding-right: 20px;
 }
-table tr td {
+.dataTable-table tbody tr td {
   color: #969696;
   padding-left: 32px;
   padding-right: 32px;
 }
-table tr td:last-child {
+/* table tr td:last-child {
   text-align: right;
-}
+} */
 table tr td.symbol {
   color: #2C3053;
   font-weight: 600;
@@ -50,11 +50,11 @@ table tr td a img {
   width: 18px;
   margin-left: 15px;
 }
-table th span img {
+/* table th span img {
   width: 6px;
   vertical-align: middle;
   margin-right: 10px;
-}
+}  */
 .add-new-cta {
   background: #848ABD;
   border-radius: 7px;
@@ -65,6 +65,12 @@ table th span img {
 .add-new-cta span {
   font-size: 18px;
   font-weight: 400;
+}
+.add-btn {
+  position: absolute;
+  top: 0px;
+  right: 12px;
+  z-index: 10;
 }
 /* section.client-form {
   padding: 32px 40px 32px 20px;
@@ -103,6 +109,15 @@ form input {
 form label span {
   color: #707070;
   font-weight: 500;
+}
+form input#code {
+  width: 88%;
+  display: inline-block;
+}
+form input#symbol {
+  width: 10%;
+  display: inline-block;
+  margin: 0 0 0 6px;
 }
 
 button {
@@ -147,32 +162,39 @@ button span img {
   margin: 0 8px 0 0px;
 }
   
-  .search-bar [list]::-webkit-list-button,
-  .search-bar [list]::-webkit-calendar-picker-indicator {
-    display: none !important;
-  }
+.search-bar [list]::-webkit-list-button,
+.search-bar [list]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
   
-  .search-display {
-    text-align: center;
-  }
-  .currency-section .top-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 0px 20px 0px;
+.search-display {
+  text-align: center;
 }
-  .currency-section form {
-    padding: 0;
-    border: none;
-    background: transparent;
+
+.currency-section .main-content {
+  padding: 0;
 }
-  .currency-section form select {
-    font-weight: 600;
-    padding: 13px 15px;
-    background: #fff;
-    border: 1px solid #E5E5E5;
-    border-radius: 7px;
-    color: #494949;
+.currency-section .add-btn {
+  right: 0;
+}
+/* .currency-section .top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px 20px 0px;
+}
+.currency-section form {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+.currency-section form select {
+  font-weight: 600;
+  padding: 13px 15px;
+  background: #fff;
+  border: 1px solid #E5E5E5;
+  border-radius: 7px;
+  color: #494949;
 }
 .currency-section form label {
   display: inline-block;
@@ -186,7 +208,7 @@ button span img {
   color: #969696;
   text-transform: capitalize;
   margin: 0 8px 0 0px;
-}
+} */
 
 /* pagination-css-start */
 .pagination-col {
@@ -196,7 +218,6 @@ button span img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 .pagination-col .content-area p {
   color: #707070;
@@ -234,12 +255,13 @@ button span img {
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   text-align: center;
+  z-index: 999;
 }
 .popup .popup__content {
   overflow: auto;
@@ -271,4 +293,52 @@ button span img {
   color: #ffffff;
   margin-top: 30px;
 }
+.popup .popup__content a.done #countDown {
+  margin-left: 5px;
+}
 /* popup-css-end */
+
+/* invoice-css-start */
+
+.two-col-content-with-cta .invoice-col .spacer {
+  padding: 68px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #E5E5E5;
+}
+.two-col-content-with-cta {
+  --bs-gutter-x: -1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--bs-gutter-x)/2);
+  margin-right: calc(var(--bs-gutter-x)/2);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.two-col-content-with-cta > * {
+  max-width: 100%;
+  padding-left: calc(var(--bs-gutter-x)/-2);
+  padding-right: calc(var(--bs-gutter-x)/-2);
+  box-sizing: border-box;
+  width: 50%;
+  text-align: center;
+}
+.two-col-content-with-cta .invoice-col .spacer h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.two-col-content-with-cta .invoice-col .spacer .invoice-cta {
+  font-size: 15px;
+  color: #17192B;
+  padding: 18px 96px;
+  background: #E8E9F3;
+  border-radius: 7px;
+  display: inline-block;
+}
+.two-col-content-with-cta .invoice-col .spacer .invoice-cta span img {
+  vertical-align: middle;
+  width: 20px;
+  margin-right: 10px;
+}
