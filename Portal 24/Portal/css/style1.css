@@ -29,15 +29,35 @@ table th {
 table th, table td {
   padding: 30px 20px 15px;
 }*/
-.currency-section .dataTable-table tbody tr td:first-child {
+.currency-section .dataTable-table tbody tr td:first-child, .currency-section .dataTable-table tbody tr td:first-child {
   color: #17192B;
   padding-left: 20px;
   padding-right: 20px;
+}
+.company-section .dataTable-table tbody tr td:first-child {
+  color: #17192B;
+  padding-left: 20px;
+  padding-right: 0px;
+}
+.company-section .dataTable-table tbody tr td:last-child {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.company-section .col-md-12 .add-btn {
+  right: 0;
+}
+table td:first-child {
+  text-transform: capitalize;
 }
 .currency-section .dataTable-table tbody tr td {
   color: #969696;
   padding-left: 32px;
   padding-right: 32px;
+}
+.company-section .dataTable-table tbody tr td {
+  color: #969696;
+  padding-left: 32px;
+  padding-right: 0px;
 }
 /* table tr td:last-child {
   text-align: right;
@@ -46,7 +66,7 @@ table th, table td {
   color: #2C3053;
   font-weight: 600;
 }
-.currency-section table tr td a img {
+.currency-section table tr td a img, .invoice-section table tr td a img, .company-section table tr td a img {
   width: 18px;
   margin-left: 15px;
 }
@@ -347,8 +367,6 @@ button span img {
 }
 
 
-
-
-/* .invoice-table .dataTable-top, .invoice-table .dataTable-bottom {
+.invoice-table .dataTable-top, .invoice-table .dataTable-bottom {
   display: none;
-} */
+}
