@@ -458,9 +458,6 @@
                         <th>GSTIN/UIN</th>
                         <th>CIN</th>
                         <th></th>
-                        <!-- <th data-type="date" data-format="YYYY/MM/DD">
-                          Start Date
-                        </th> -->
                       </tr>
                     </thead>
                     <tbody>
@@ -3634,39 +3631,10 @@
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
+    <script src="js/main.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/moment.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.js"></script>
     <script src="https://unpkg.com/vanilla-datatables-editable@0.0.10/datatable.editable.min.js"></script>
-
-    <!-- Mneu js -->
-    <script>
-      $(document).ready(function() {
-        $(".title").click(function() {
-          var target = $(this)
-            .parent()
-            .children(".list-items");
-          $(target).slideToggle();
-        });
-      });
-    </script>
-
-    <!-- Profile Dropdown -->
-    <script>
-      $(document).ready(function() {
-        $(".admin").click(function() {
-          $(".user-drop").slideToggle();
-        });
-      });
-    </script>
-    <!-- Sidebar items active -->
-    <script>
-      $(document).ready(function() {
-        $(".space .list-items li a").on("click", function() {
-          $(".space .list-items li a").removeClass("active");
-          $(this).addClass("active");
-        });
-      });
-    </script>
 
     <!-- Table js -->
     <script>

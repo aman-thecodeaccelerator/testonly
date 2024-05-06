@@ -485,35 +485,6 @@
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
     ></script>
-    <!-- Mneu js -->
-    <script>
-      $(document).ready(function() {
-        $(".title").click(function() {
-          var target = $(this)
-            .parent()
-            .children(".list-items");
-          $(target).slideToggle();
-        });
-      });
-    </script>
-
-    <!-- Profile Dropdown -->
-    <script>
-      $(document).ready(function() {
-        $(".admin").click(function() {
-          $(".user-drop").slideToggle();
-        });
-      });
-    </script>
-
-    <!-- Sidebar items active -->
-    <script>
-      $(document).ready(function() {
-        $(".space .list-items li a").on("click", function() {
-          $(".space .list-items li a").removeClass("active");
-          $(this).addClass("active");
-        });
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
