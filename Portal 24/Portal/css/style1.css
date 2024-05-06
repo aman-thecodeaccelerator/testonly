@@ -97,7 +97,7 @@ form label {
   margin-bottom: 16px;
   display: block;
 }
-form input {
+form input, form input, form textarea {
   display: block;
   background: #fff;
   border: 1px solid #e8e9f3;
@@ -118,6 +118,9 @@ form input#symbol {
   width: 10%;
   display: inline-block;
   margin: 0 0 0 6px;
+}
+form .two-col-field:last-child .form-control {
+  margin-bottom: 0px;
 }
 
 button {
