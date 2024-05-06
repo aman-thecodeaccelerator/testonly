@@ -356,8 +356,10 @@ h6 {
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #cccccc;
-  background-size: cover;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200px;
   position: relative;
   margin: 0 auto;
 }
@@ -375,8 +377,7 @@ h6 {
   left: 0;
   width: 100%;
   padding: 5px 0;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.75);
+  color: #000;
   font-size: 14px;
   text-align: center;
 }
@@ -614,8 +615,8 @@ form textarea::placeholder {
 }
 
 .dataTable-pagination li.pager a {
-  font-size: 20px;
-  padding: 7px 11px;
+  font-size: 18px;
+  padding: 6.3px 12px;
   line-height: 1;
 }
 .dataTable-pagination a {
@@ -746,17 +747,17 @@ form textarea::placeholder {
   color: #969696;
 }
 
-.dashboard .navigation-with-content .main-content .col-md-12 {
+.main-content .col-md-12 {
   position: relative;
 }
 
-.dashboard .navigation-with-content .main-content .col-md-12 .add-btn {
+.main-content .col-md-12 .add-btn {
   position: absolute;
   top: 0px;
   right: 12px;
   z-index: 10;
 }
-.dashboard .navigation-with-content .main-content .col-md-12 .add-btn button {
+.main-content .col-md-12 .add-btn button {
   padding: 11px 20px;
   margin: 0;
   line-height: 1.5;
@@ -790,6 +791,14 @@ form textarea::placeholder {
   cursor: pointer;
 }
 
+.dataTable-table > tbody > tr > td a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #969696;
+}
+.dataTable-table > tbody > tr > td a.mailto-link .mailto-message {
+  display: none;
+}
 .dataTable-table > tbody > tr > td .document-copy {
   max-width: 16px;
   cursor: pointer;
@@ -797,4 +806,62 @@ form textarea::placeholder {
   margin-left: 12px;
   position: absolute;
   right: 0;
+}
+
+.dataTable-table > tbody > tr > td.dataTables-empty {
+  text-align: center;
+}
+
+/* Popup css */
+.confirm-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.5);
+  display: none;
+}
+.confirm-popup .popup-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 4px 4px 4px 0px #0000001a;
+  padding: 62px 30px 62px 30px;
+  border-radius: 15px;
+  max-width: 377px;
+}
+.confirm-popup .popup-box .main {
+  text-align: center;
+}
+.confirm-popup .popup-box .main img {
+  margin-bottom: 35px;
+  max-width: 83px;
+}
+.confirm-popup .popup-box .main h4 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.confirm-popup .popup-box .main .cta-box {
+  margin-top: 35px;
+}
+.confirm-popup .popup-box .main .cta-box button {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f2f2f8;
+  border-radius: 60px;
+  padding: 10px 20px;
+  margin: 0;
+  background-color: #f4334a;
+  line-height: normal;
+}
+
+.confirm-popup .popup-box .main .cta-box button.cancel-cta {
+  background-color: #c9c9c9;
+  color: #707070;
+  margin-left: 10px;
 }
