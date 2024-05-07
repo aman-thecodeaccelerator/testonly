@@ -164,13 +164,13 @@ form .two-col-field:last-child .form-control {
   
 }
 
-.gst-form .total-amount .title-input {
+.gst-form .total-amount-full .title-input {
   padding: 0 0px;
   display: block;
   margin-bottom: 13px;
   padding-bottom: 13px;
 }
-.gst-form .total-amount {
+.gst-form .total-amount-full {
   max-width: 100%;
   padding: 20px 0px;
 }
@@ -187,14 +187,14 @@ form .two-col-field:last-child .form-control {
   padding: 20px 15px 25px;
   margin-bottom: 0;
 }
-.gst-form .total-amount input {
+.gst-form .total-amount-full input {
   max-width: 100%;
 }
-.gst-form .total-amount .title-input label, .gst-form .total-amount label {
+.gst-form .total-amount-full .title-input label, .gst-form .total-amount-full label {
   padding-right: 0;
   margin-bottom: 10px;
 }
-.gst-form .total-amount .top-lable {
+.gst-form .total-amount-full .top-lable {
   padding: 0 20px 6px;
   margin-bottom: 0;
 }
