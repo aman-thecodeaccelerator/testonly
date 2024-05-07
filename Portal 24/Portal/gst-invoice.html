@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style1.css" />
-    <title>GST Invoice</title>
+    <title>GST Invoice </title>
   </head>
   <body>
     <main>
@@ -442,18 +442,19 @@
 
           <!-- Content -->
           <div class="main-content">
-            <form action="" class="non-gst-form">
+            <form action="" class="gst-form">
               <div class="basic-info">
                 <div class="two-col-field">
                   <div class="form-control">
                     <label for="name">Client</label>
-                    <select name="" id="">
+                    <select name="" id="select-client">
                       <option value="Select client">Select client</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                     </select>
+                    <button type="button" class="add-more">+</button>
                   </div>
-                  <button type="button" class="add-more">+</button>
+                  
                   <div class="form-control">
                     <label for="companyname">Invoice Number</label>
                     <input type="text" placeholder="1234567890" />
@@ -484,11 +485,10 @@
                   </div>
                 </div>
               </div>
+
               <div class="add-row-section">
-                <div class="two-col-field">
-                  <div class="count-no">
-                    <h6>1.</h6>
-                  </div>
+
+                <div class="two-col-field template_row">
                   <div class="form-control">
                     <label for="name">Description of Service</label>
                     <input type="text" placeholder="Select client" />
@@ -503,10 +503,8 @@
                     <input type="text" placeholder="Enter amount" />
                   </div>
                 </div>
-                <div class="two-col-field">
-                  <div class="count-no">
-                    <h6>2.</h6>
-                  </div>
+
+                <div class="two-col-field template_row">
                   <div class="form-control">
                     <input type="text" placeholder="Select client" />
                   </div>
@@ -518,30 +516,64 @@
                     <input type="text" placeholder="Enter amount" />
                   </div>
                 </div>
+
               </div>
+
               <div class="add-remove-btn">
                 <button type="button" class="js-add-row">+ Add Row</button>
                 <button type="button" class="js-del-row remove">
                   - Remove
                 </button>
               </div>
-              <div class="total-amount">
+
+              <div class="total-amount-full">
                 <div class="top-lable">
                   <label for="">Amount Chargeable</label>
                   <label for="">E. & O.E</label>
                 </div>
-                <div class="title-input">
-                  <label for="">Total :</label>
-                  <input type="text" placeholder="$ 120" />
+
+                <form>
+                <div class="two-col-field">
+
+                  <div class="form-control">
+                    <div class="title-input">
+                      <label for="taxablevalue">Taxable value</label>
+                      <input type="text" id="taxable-value" name="taxablevalue" placeholder="120" />
+                    </div>
+                  </div>
+
+                  <div class="two-col-field">
+
+                  <div class="form-control">
+                    <div class="title-input">
+                      <label for="">Taxes</label>
+                      <input type="text" placeholder="$ 20" />
+                    </div>
+                  </div>
+
+                  <div class="form-control">
+                    <div class="title-input">
+                      <label for="total">Total</label>
+                      <input type="text" id="total" name="total" placeholder="140" />
+                    </div>
+                  </div>
+
                 </div>
-                <div class="title-input">
-                  <label for="">Received In Advance :</label>
-                  <input type="text" placeholder="$ 20" />
-                </div>
-                <div class="title-input">
-                  <label for="">Remaining Amount :</label>
-                  <input type="text" placeholder="$ 100" />
-                </div>
+              </div>
+
+                <div class="two-col-field">
+                  <div class="form-control">
+                      <label for="receivedinadvance">Received In Advance</label>
+                      <input type="text" id="received-in-advance" name="receivedinadvance" placeholder="40">
+                  </div>
+              
+                  <div class="form-control">
+                      <label for="remainingamount">Remaining Amount</label>
+                      <input type="text" id="remaining-amount" name="remainingamount" placeholder="100">
+                  </div>
+              </div>                
+              </form>
+
               </div>
 
               <div class="cta-box">
@@ -554,93 +586,51 @@
                 </button>
               </div>
             </form>
-            <!-- add client popup -->
-            <div class="add-client-main-popup">
-              <div class="add-client-popup">
-                <div class="main-box">
-                  <div class="title-with-close">
-                    <h4>Add Client</h4>
-                    <img
-                      class="close-btn"
-                      src="images/close-btn.svg"
-                      alt="close-btn"
-                    />
-                  </div>
-                  <form action="" class="popup-form">
-                    <div class="two-col-field">
-                      <div class="form-control">
-                        <label for="name">Client Name</label>
-                        <input type="text" placeholder="Enter client name" />
-                      </div>
-
-                      <div class="form-control">
-                        <label for="companyname">Company Name</label>
-                        <input type="text" placeholder="Enter company name" />
-                      </div>
-                    </div>
-                    <div class="two-col-field">
-                      <div class="form-control">
-                        <label for="name">Email</label>
-                        <input type="text" placeholder="Enter email address" />
-                      </div>
-
-                      <div class="form-control">
-                        <label for="companyname">CIN</label>
-                        <input type="text" placeholder="CIN" />
-                      </div>
-                    </div>
-                    <div class="two-col-field">
-                      <div class="form-control">
-                        <label for="name">GSTIN/UIN</label>
-                        <input type="text" placeholder="Enter GSTIN/UIN" />
-                      </div>
-                    </div>
-                    <button type="submit" fdprocessedid="5jv0z">
-                      <span><img src="images/cta-icon.svg"/></span>Save
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </main>
     <!-- jq cdn -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
-    <script>
-      $(document).on("click", ".js-add-row", function() {
-        $(".add-row-section").append(
-          $(".add-row-section")
-            .find(".two-col-field:last")
-            .clone()
-        );
-        $(".two-col-field:last input").val("");
-      });
 
-      $(document).on("click", ".js-del-row", function() {
-        $(".add-row-section")
-          .find(".two-col-field:last")
-          .remove();
-      });
-    </script>
+<!-- <script>
+  // ADD ROW BY CLONING THE LAST ROW.
+$(document).on('click', '.add-row-cta', function() {  
+  $('.add-row-section').append($('.add-row-section').find('.template_row:last').clone().find("template_row").val("").end());
+  var rowCount = $('.add-row-section .template_row').length;
+  if(rowCount > 1) {
+     $('.js-del-row').show('fast');
+  }
+});
 
-    <!-- Add client popup js -->
-    <script>
-      $(document).ready(function() {
-        $(".add-more").click(function() {
-          $(".add-client-main-popup").fadeIn();
-        });
+// REMOVE THE LAST ROW IN THE TABLE .
+$(document).on('click', '.remove-row-cta', function() {  
+  var rowCount = $('.add-row-section .template_row').length;
+  if(rowCount > 1){
+    $('.add-row-section').find('.template_row:last').remove();
+  }
 
-        $(".close-btn").click(function() {
-          $(".add-client-main-popup").fadeOut();
-        });
-      });
-    </script>
+});
+
+</script> -->
+
+<script>
+  $(document).on("click", ".js-add-row", function() {
+    $(".add-row-section").append(
+      $(".add-row-section")
+        .find(".two-col-field:last")
+        .clone()
+    );
+    $(".two-col-field:last input").val("");
+  });
+
+  $(document).on("click", ".js-del-row", function() {
+    $(".add-row-section")
+      .find(".two-col-field:last")
+      .remove();
+  });
+</script>
+
   </body>
 </html>
