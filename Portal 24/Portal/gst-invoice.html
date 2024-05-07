@@ -447,13 +447,14 @@
                 <div class="two-col-field">
                   <div class="form-control">
                     <label for="name">Client</label>
-                    <select name="" id="">
+                    <select name="" id="select-client">
                       <option value="Select client">Select client</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                     </select>
+                    <button type="button" class="add-more">+</button>
                   </div>
-                  <button type="button" class="add-more">+</button>
+                  
                   <div class="form-control">
                     <label for="companyname">Invoice Number</label>
                     <input type="text" placeholder="1234567890" />
@@ -518,9 +519,11 @@
 
               </div>
 
-              <div class="cta-col">
-                <a class="add-row-cta list_add" href="javascript:void(0);" title="Add Row"><span>+</span>Add Row</a>
-                <a class="remove-row-cta list_cancel" href="javascript:void(0);" title="Delete Row"><span>-</span>Remove</a>
+              <div class="add-remove-btn">
+                <button type="button" class="js-add-row">+ Add Row</button>
+                <button type="button" class="js-del-row remove">
+                  - Remove
+                </button>
               </div>
 
               <div class="total-amount-full">
@@ -569,8 +572,7 @@
                       <input type="text" id="companyname" name="companyname" value="Code Accelerator Private Limited">
                   </div>
               </div>                
-              
-            </form>
+              </form>
 
               </div>
 
