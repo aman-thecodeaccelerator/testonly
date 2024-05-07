@@ -57,7 +57,10 @@ table td:first-child {
 .company-section .dataTable-table tbody tr td {
   color: #969696;
   padding-left: 32px;
-  padding-right: 0px;
+  padding-right: 28px;
+}
+.company-table .dataTable-table > tbody > tr > td .document-copy {
+  top: 44%;
 }
 /* table tr td:last-child {
   text-align: right;
@@ -368,13 +371,7 @@ button span img {
   margin-right: 10px;
 }
 
-<<<<<<< HEAD
 
 .invoice-table .dataTable-top, .invoice-table .dataTable-bottom {
   display: none;
 }
-=======
-/* .invoice-table .dataTable-top, .invoice-table .dataTable-bottom {
-  display: none;
-} */
->>>>>>> d8126beb6a1a765ab2cf42b347119fc23c87b41b
