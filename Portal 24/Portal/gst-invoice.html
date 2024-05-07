@@ -537,8 +537,8 @@
 
                   <div class="form-control">
                     <div class="title-input">
-                      <label for="">Taxable value</label>
-                      <input type="text" placeholder="$ 120" />
+                      <label for="taxablevalue">Taxable value</label>
+                      <input type="text" id="taxable-value" name="taxablevalue" placeholder="120" />
                     </div>
                   </div>
 
@@ -546,15 +546,15 @@
 
                   <div class="form-control">
                     <div class="title-input">
-                      <label for="">Received In Advance :</label>
+                      <label for="">Taxes</label>
                       <input type="text" placeholder="$ 20" />
                     </div>
                   </div>
 
                   <div class="form-control">
                     <div class="title-input">
-                      <label for="">Remaining Amount :</label>
-                      <input type="text" placeholder="$ 100" />
+                      <label for="total">Total</label>
+                      <input type="text" id="total" name="total" placeholder="140" />
                     </div>
                   </div>
 
@@ -563,13 +563,13 @@
 
                 <div class="two-col-field">
                   <div class="form-control">
-                      <label for="name">Client Name</label>
-                      <input type="text" id="name" name="name" value="Monkey D Garp">
+                      <label for="receivedinadvance">Received In Advance</label>
+                      <input type="text" id="received-in-advance" name="receivedinadvance" placeholder="40">
                   </div>
               
                   <div class="form-control">
-                      <label for="companyname">Company Name</label>
-                      <input type="text" id="companyname" name="companyname" value="Code Accelerator Private Limited">
+                      <label for="remainingamount">Remaining Amount</label>
+                      <input type="text" id="remaining-amount" name="remainingamount" placeholder="100">
                   </div>
               </div>                
               </form>
@@ -594,7 +594,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 
-<script>
+<!-- <script>
   // ADD ROW BY CLONING THE LAST ROW.
 $(document).on('click', '.add-row-cta', function() {  
   $('.add-row-section').append($('.add-row-section').find('.template_row:last').clone().find("template_row").val("").end());
@@ -613,6 +613,23 @@ $(document).on('click', '.remove-row-cta', function() {
 
 });
 
+</script> -->
+
+<script>
+  $(document).on("click", ".js-add-row", function() {
+    $(".add-row-section").append(
+      $(".add-row-section")
+        .find(".two-col-field:last")
+        .clone()
+    );
+    $(".two-col-field:last input").val("");
+  });
+
+  $(document).on("click", ".js-del-row", function() {
+    $(".add-row-section")
+      .find(".two-col-field:last")
+      .remove();
+  });
 </script>
 
   </body>

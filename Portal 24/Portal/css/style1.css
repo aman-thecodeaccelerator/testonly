@@ -225,6 +225,17 @@ form .two-col-field:last-child .form-control {
   right: 31px;
   bottom: 19px;
 }
+.gst-form .cta-box {
+	display: flex;
+	align-items: center;
+}
+.gst-form .cta-box .preview-cta {
+	padding: 13px 20px;
+	background: #e8e9f3;
+	color: #2c3053;
+	font-weight: 500;
+	margin-left: 10px;
+}
 /* .gst-form .add-remove-btn button {
   border-radius: 15px;
   padding: 8px 20px 8px 20px;
