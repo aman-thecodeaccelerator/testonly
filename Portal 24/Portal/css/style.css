@@ -796,7 +796,7 @@ form textarea::placeholder {
   font-weight: 500;
   color: #969696;
 }
-.dataTable-table > tbody > tr > td a.mailto-link .mailto-message {
+.mailto-message {
   display: none;
 }
 .dataTable-table > tbody > tr > td .document-copy {
@@ -868,19 +868,40 @@ form textarea::placeholder {
 }
 
 /* GST Form Css */
-.gst-form {
+.non-gst-form {
   background-color: transparent;
   padding: 0;
   border: 0;
 }
 
-.gst-form .form-control {
+/* .non-gst-form .two-col-field {
+  align-items: center;
+} */
+
+.non-gst-form .two-col-field .count-no {
+  margin: 0 5px 0 15px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+}
+
+.non-gst-form .two-col-field:first-child .count-no {
+  align-items: end;
+  margin-top: 9px;
+}
+
+.non-gst-form .two-col-field .count-no h6 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.non-gst-form .form-control {
   position: relative;
 }
 
-.gst-form .basic-info,
-.gst-form .add-row-section,
-.gst-form .total-amount {
+.non-gst-form .basic-info,
+.non-gst-form .add-row-section,
+.non-gst-form .total-amount {
   background: #ffffff;
   border: 1px solid #e5e5e5;
   padding: 35px 3px 40px;
@@ -888,7 +909,12 @@ form textarea::placeholder {
   margin-bottom: 30px;
 }
 
-.gst-form .basic-info .add-more {
+.non-gst-form .add-row-section,
+.non-gst-form .total-amount {
+  margin-bottom: 0;
+}
+
+.non-gst-form .basic-info .add-more {
   color: #707070;
   font-size: 25px;
   height: max-content;
@@ -897,36 +923,37 @@ form textarea::placeholder {
   padding: 17px 18px 15px;
   line-height: 1;
 }
-.gst-form .basic-info select {
+.non-gst-form .basic-info select {
   outline: none;
-  /* margin-right: 8px;
+  margin-right: 8px;
   position: relative;
-  background-image: url("images/s-drop.svg");
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 140 140' width='24' height='24' xmlns='http://www.w3.org/2000/svg'><g><path d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z' fill='white'/></g></svg>");
   background-repeat: no-repeat;
-  background-position-x: 87%;
-  background-position-y: 50%;
+  background-blend-mode: difference;
+  background-position-x: 96%;
+  background-position-y: 53%;
   background-size: 17px;
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
-  text-overflow: ""; */
+  text-overflow: "";
   cursor: pointer;
 }
 
-.gst-form .total-amount {
+.non-gst-form .total-amount {
   max-width: 532px;
   padding: 20px 0px;
 }
-.gst-form .form-control .date-bar {
+.non-gst-form .form-control .date-bar {
   padding-right: 40px;
 }
-.gst-form .form-control .calendar-icon {
+.non-gst-form .form-control .calendar-icon {
   position: absolute;
   right: 31px;
   bottom: 19px;
 }
-.gst-form .total-amount .top-lable,
-.gst-form .total-amount .title-input {
+.non-gst-form .total-amount .top-lable,
+.non-gst-form .total-amount .title-input {
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -935,35 +962,55 @@ form textarea::placeholder {
   padding-bottom: 13px;
 }
 
-.gst-form .total-amount .title-input {
+.non-gst-form .total-amount .title-input {
   border-bottom: 1px solid #e8e9f3;
 }
-.gst-form .total-amount .title-input:last-child {
+.non-gst-form .total-amount .title-input:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
   border: 0;
 }
-.gst-form .total-amount label {
+.non-gst-form .total-amount label {
   margin: 0;
 }
-.gst-form .total-amount .title-input label {
+.non-gst-form .total-amount .title-input label {
   padding-right: 10px;
 }
 
-.gst-form .total-amount input {
+.non-gst-form .total-amount input {
   max-width: 330px;
   padding: 15px 20px;
 }
 
-.gst-form .cta-box {
+.non-gst-form .cta-box {
   display: flex;
   align-items: center;
 }
 
-.gst-form .cta-box .preview-cta {
+.non-gst-form .cta-box .preview-cta {
   padding: 13px 20px;
   background: #e8e9f3;
   color: #2c3053;
   font-weight: 500;
   margin-left: 10px;
+}
+
+.add-remove-btn {
+  display: flex;
+  align-items: center;
+}
+
+.add-remove-btn button {
+  font-size: 14px;
+  font-weight: 500;
+  color: #00a236;
+  background-color: #9af5b9;
+  border-radius: 12px;
+  padding: 10px 20px 10px 20px;
+  margin: 13px 0 30px;
+}
+.add-remove-btn button.remove {
+  color: #f4334a;
+  background-color: #f8b6be;
+  margin-left: 15px;
 }
