@@ -467,8 +467,20 @@
                 <tr>
                     <td>The Code Accelerator Private...</td>
                     <td>
-                        <a href="thecodeaccelerator.com">thecodeaccelerator.com
-                        <img class="document-copy" src="images/document-copy.svg" alt="document"/></a>
+
+                        <!-- You just need to get this field. -->
+                          <div class="clipboard">
+                            
+                            <input onclick="copy()" class="copy-input" value="thecodeaccelerator.com" id="copyClipboard" readonly>
+                            <button class="copy-btn" id="copyButton" onclick="copy()"><img class="document-copy" src="images/document-copy.svg" alt="document"/></button>
+                          </div>
+                          <div id="copied-success" class="copied">
+                            <span>Copy</span>
+                          </div>
+                        <!-- You just need to get this field. -->
+
+                        <!-- <a href="thecodeaccelerator.com">thecodeaccelerator.com
+                        <img class="document-copy" src="images/document-copy.svg" alt="document"/></a> -->
                     </td>
                     <td>104, 1st floor, Crown Square, Gandhi Path W, Jaipur, Rajasthan...</td>
                     <td>
@@ -759,7 +771,7 @@
 </script>
 
 <!-- Copy email js -->
-<script>
+<!-- <script>
   $(document).ready(function() {
     // Add class to mailto link
     // Needed to separate the disabling of the default action AND copy email to clipboard
@@ -804,6 +816,19 @@
     document.execCommand("copy");
     document.body.removeChild(dummy);
   }
+</script> -->
+
+<script>
+  function copy() {
+  let copyText = document.getElementById("copyClipboard");
+  let copySuccess = document.getElementById("copied-success");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+  navigator.clipboard.writeText(copyText.value);
+  
+ copySuccess.style.opacity = "1";
+ setTimeout(function(){ copySuccess.style.opacity = "0" }, 500);
+}
 </script>
 
 <script>
