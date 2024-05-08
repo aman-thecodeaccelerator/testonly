@@ -377,7 +377,8 @@ h6 {
   left: 0;
   width: 100%;
   padding: 5px 0;
-  color: #000;
+  color: #fff;
+  background-color: #000;
   font-size: 14px;
   text-align: center;
 }
@@ -849,6 +850,7 @@ form textarea::placeholder {
 }
 .confirm-popup .popup-box .main .cta-box {
   margin-top: 35px;
+  justify-content: center;
 }
 .confirm-popup .popup-box .main .cta-box button {
   font-size: 14px;
@@ -883,22 +885,22 @@ form textarea::placeholder {
   align-items: center;
 } */
 
-.non-gst-form .two-col-field .count-no {
+/* .non-gst-form .two-col-field .count-no {
   margin: 0 5px 0 15px;
   height: 57px;
   display: flex;
   align-items: center;
-}
+} */
 
-.non-gst-form .two-col-field:first-child .count-no {
+/* .non-gst-form .two-col-field:first-child .count-no {
   align-items: end;
   margin-top: 9px;
-}
+} */
 
-.non-gst-form .two-col-field .count-no h6 {
+/* .non-gst-form .two-col-field .count-no h6 {
   font-size: 14px;
   font-weight: 600;
-}
+} */
 
 .non-gst-form .form-control {
   position: relative;
@@ -919,6 +921,27 @@ form textarea::placeholder {
   margin-bottom: 0;
 }
 
+.non-gst-form .add-row-section .two-col-field {
+  position: relative;
+  counter-increment: css-counter 1;
+  padding-left: 33px;
+}
+.non-gst-form .add-row-section .two-col-field::before {
+  content: counter(css-counter) ". ";
+  position: absolute;
+  top: 22px;
+  left: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3053;
+}
+.non-gst-form .add-row-section .two-col-field:first-child:before {
+  top: 51px;
+}
+
+.non-gst-form .add-row-section .two-col-field .form-control:first-child {
+  width: 70%;
+}
 .non-gst-form .basic-info .add-more {
   color: #707070;
   font-size: 25px;
@@ -1031,6 +1054,7 @@ form textarea::placeholder {
   height: 100%;
   background: #17192b70;
   display: none;
+  backdrop-filter: blur(1px);
 }
 
 .add-client-main-popup .add-client-popup {
