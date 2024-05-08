@@ -361,6 +361,10 @@ form .two-col-field:last-child .form-control {
   text-align: center;
   z-index: 999;
 }
+
+.popup.is-visible {
+  display: block;
+}
 .popup .popup__content {
   overflow: auto;
   background: #ffffff;
@@ -383,7 +387,7 @@ form .two-col-field:last-child .form-control {
   font-weight: 700;
   line-height: 1.4;
 }
-.popup .popup__content a.done {
+.popup .popup__content .done {
   background: #32b53f;
   border-radius: 60px;
   padding: 10px 20px;
@@ -391,7 +395,7 @@ form .two-col-field:last-child .form-control {
   color: #ffffff;
   margin-top: 30px;
 }
-.popup .popup__content a.done #countDown {
+.popup .popup__content .done #countdown-number {
   margin-left: 5px;
 }
 /* popup-css-end */
