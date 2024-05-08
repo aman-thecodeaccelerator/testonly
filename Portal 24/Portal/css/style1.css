@@ -180,8 +180,8 @@ form textarea {
   border-radius: 7px;
   font-weight: 500;
 }
-form input:focus-visible, 
-form select:focus-visible, 
+form input:focus-visible,
+form select:focus-visible,
 form textarea:focus-visible {
   outline: none;
   stroke: none;
@@ -417,6 +417,7 @@ form .two-col-field:last-child .form-control {
   display: inline-block;
   color: #ffffff;
   margin-top: 30px;
+  cursor: pointer;
 }
 .popup .popup__content .done #countdown-number {
   margin-left: 5px;
@@ -481,21 +482,28 @@ form .two-col-field:last-child .form-control {
 /* You just need to get this field */
 .copy-input {
   cursor: pointer;
+  background-color: #eaeaeb;
   border: none;
+  color: #6c6c6c;
   font-size: 14px;
-  font-weight: 500;
-  color: #969696;
+  border-radius: 5px;
+  padding: 15px 45px 15px 15px;
+  font-family: "Montserrat", sans-serif;
 }
 .copy-input:focus {
   outline: none;
 }
 
 .copy-btn {
-  background-color: transparent;
+  width: 40px;
+  background-color: #eaeaeb;
+  font-size: 18px;
+  padding: 6px 9px;
+  border-radius: 5px;
   border: none;
-  transition: all .4s;
-  margin-top: 0;
-  padding: 0;
+  color: #6c6c6c;
+  margin-left: -50px;
+  transition: all 0.4s;
 }
 .copy-btn:focus {
   outline: none;

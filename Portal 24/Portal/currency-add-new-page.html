@@ -479,17 +479,14 @@
                     >Currency Symbols <span>(HTML Unicode UTF-8)</span></label
                   >
                   <input
+                    id="inputId"
                     type="text"
-                    id="code"
+                    value=""
                     name="symbol"
-                    placeholder="e. g. &\8377;"
+                    placeholder="e. g. 8377"
                   />
-                  <input
-                    type="text"
-                    id="symbol"
-                    name="symbol"
-                    placeholder="e. g. &#8377;"
-                  />
+                  <span id="unicodeCharacterId"> </span>
+                  <code>&amp;#<span id="unicodeNumberId">8377</span>;</code>
                 </div>
               </div>
             </form>
@@ -524,6 +521,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="js/main.js"></script>
 
     <script>
       $(".count-wrap").click(function() {
@@ -588,7 +586,7 @@
       }
     </script> -->
     <!-- new js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script>
       $(function() {
         //modal
@@ -640,6 +638,32 @@
           modal.removeClass("is-visible");
         });
       });
+    </script>
+
+    <!-- currency symbol html unicode js -->
+
+    <script>
+      var convertUnicode = function() {
+        console.log("in convertUnicode...");
+
+        //INPUT: read the input line
+        var unicodeNumber = document.querySelector("#inputId").value;
+
+        //PROCESS: create the HTML code to display the unicode character
+        var unicodeCharacter = "&#" + unicodeNumber + ";";
+
+        //OUTPUT: output the raw unicodeNumber
+        document.querySelector("#unicodeNumberId ").innerHTML = unicodeNumber;
+
+        //OUTPUT: output the unicode character
+        document.querySelector(
+          "#unicodeCharacterId"
+        ).innerHTML = unicodeCharacter;
+      };
+
+      //INPUT: trigger convertUnicode when the button is clicked or tab/enter is hit.
+      document.querySelector("#inputId").onchange = convertUnicode;
+      document.querySelector("#buttonId").onclick = convertUnicode;
     </script>
   </body>
 </html>
