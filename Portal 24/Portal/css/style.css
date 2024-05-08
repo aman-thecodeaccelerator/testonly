@@ -1050,6 +1050,13 @@ form textarea::placeholder {
   padding: 0 5px;
 }
 
+.add-client-main-popup
+  .add-client-popup
+  form
+  .two-col-field:last-child
+  .form-control {
+  margin-bottom: 0;
+}
 .add-client-main-popup .add-client-popup .popup-form {
   border: none;
   padding: 0;
