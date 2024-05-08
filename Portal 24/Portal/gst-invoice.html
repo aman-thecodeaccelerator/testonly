@@ -387,7 +387,7 @@
           <div class="navigation-section">
             <div class="main">
               <div class="title">
-                <h4>Client</h4>
+                <h4>Gst Invoice</h4>
               </div>
               <div class="profile-notification">
                 <ul class="nav">
@@ -585,35 +585,32 @@
                   <span><img src="images/pre.svg" alt="pre"/></span>Preview
                 </button>
               </div>
-            </form>
-          </div>
+          </form>
         </div>
       </div>
-    </main>
-    <!-- jq cdn -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+  </div>
 
-<!-- <script>
-  // ADD ROW BY CLONING THE LAST ROW.
-$(document).on('click', '.add-row-cta', function() {  
-  $('.add-row-section').append($('.add-row-section').find('.template_row:last').clone().find("template_row").val("").end());
-  var rowCount = $('.add-row-section .template_row').length;
-  if(rowCount > 1) {
-     $('.js-del-row').show('fast');
-  }
-});
+  <div class="invoice-preview-popup">
+    <div class="popup-box">
+      <div class="main">    
 
-// REMOVE THE LAST ROW IN THE TABLE .
-$(document).on('click', '.remove-row-cta', function() {  
-  var rowCount = $('.add-row-section .template_row').length;
-  if(rowCount > 1){
-    $('.add-row-section').find('.template_row:last').remove();
-  }
+        <div class="cta-box">
+          <h4>Invoice Preview</h4>
+          <a class="close-pdf"><img src="images/close-icon.svg"></a>
+        </div>
+        <div class="invoice-pdf">
+          
+        </div>
 
-});
+      </div>
+    </div>
+  </div>
 
-</script> -->
+</main>
+<!-- jq cdn -->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
 
 <script>
 
@@ -631,20 +628,19 @@ $(document).on("click", ".js-add-row", function() {
       .find(".two-col-field:last")
       .remove();
 });
-  // $(document).on("click", ".js-add-row", function() {
-  //   $(".add-row-section").append(
-  //     $(".add-row-section")
-  //       .find(".two-col-field:last")
-  //       .clone()
-  //   );
-  //   $(".two-col-field:last input").val("");
-  // });
 
-  // $(document).on("click", ".js-del-row", function() {
-  //   $(".add-row-section")
-  //     .find(".two-col-field:last")
-  //     .remove();
-  // });
+</script>
+
+<script>
+  $(document).ready(function() {
+    $(".preview-cta").click(function() {
+      $(".invoice-preview-popup").fadeIn();
+    });
+
+    $(".cancel-cta").click(function() {
+      $(".confirm-popup").fadeOut();
+    });
+  });
 </script>
 
   </body>

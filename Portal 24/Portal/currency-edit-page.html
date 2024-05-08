@@ -470,90 +470,87 @@
                         
           </form>
 
-          <button type="submit"><span><img src="images/cta-icon.svg"></span>Update</button>
+          <button class="modal-toggle" type="submit"><span><img src="images/cta-icon.svg"></span>Update</button>
     </section>
 
   </div>
 </div>
 </main>
 
-    <section class="popup">
-        <div class="popup__content">          
-            <img src="images/success-icon.svg">
-            <h2>Your data has successfully submitted !</h2>
-            <a id="popup-close" class="done" href="javascript:void(0);">Continue<span id="countDown"></span></a>          
-        </div>
-    </section>
+<section class="popup">
+  <div class="modal-toggle"></div>
+  <div class="popup__content">
+    <img src="images/success-icon.svg" />
+    <h2>Your data has successfully submitted !</h2>
+    <div id="count-loading" class="count-wrap done">
+      Continue
+      <span class="n" id="countdown-number"></span>
+      <div id="loader"></div>
+    </div>
+  </div>
+</section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/86186/moment.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-datatables@latest/dist/vanilla-dataTables.min.js"></script>
-<script src="https://unpkg.com/vanilla-datatables-editable@0.0.10/datatable.editable.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
-$("button").click(function() {
-  $(".popup").fadeIn(500);
-});
-$(".done").click(function() {
-  $(".popup").fadeOut(500);
-});
+  $(".count-wrap").click(function() {
+    $(".popup").removeClass("is-visible");
+  });
 </script>
 
+
 <script>
-    $(document).ready(function () {
-  // When site loaded, load the Popupbox First
-  new popup($(".popup"), $("#container")).load();
-});
-function popup(popup, container) {
-  var thisPopup = this,
-    timer,
-    counter = 5,
-    countDown = $("#countDown").text(counter.toString());
+  $(function() {
+    //modal
+    const modal = $(".popup");
+    const modalToggle = $(".modal-toggle");
+    const modalWrapper = $(".popup__content");
+    const modalHeight = modalWrapper.height();
 
-  thisPopup.load = function () {
-    container.animate(
-      {
-        opacity: "0.3"
-      },
-      250,
-      function () {
-        popup.fadeIn("250");
-      }
-    );
+    //countdown
+    function coundDown() {
+      console.log("countdown");
+      var countdownNumberEl = document.getElementById("countdown-number");
+      var countdown = 5;
+      countdownNumberEl.textContent = countdown;
+      var downloadTimer = setInterval(function() {
+        countdown--; // 5 to 0
+        countdownNumberEl.textContent = countdown;
 
-    container.off("click").on("click", function () {
-      thisPopup.unload();
-    });
+        if (countdown > 0) {
+          modalToggle.unbind("click", showMConfirmModal);
+        } else {
+          modalToggle.bind("click", showMConfirmModal);
+          clearInterval(downloadTimer);
+          modal.removeClass("is-visible");
+        }
+      }, 1000);
+    }
 
-    $("#popup-close")
-      .off("click")
-      .on("click", function () {
-        thisPopup.unload();
-      });
-
-    timer = setInterval(function () {
-      counter--;
-      if (counter < 0) {
-        thisPopup.unload();
+    //show modal
+    function showMConfirmModal(e) {
+      console.log("icon click");
+      const modalPosY = $(document).outerHeight() / 2 - modalHeight / 2;
+      modalWrapper.css("margin-to", modalPosY);
+      //fire countedown modal
+      if ($("#count-loading").length) {
+        e.preventDefault();
+        modal.addClass("is-visible");
+        coundDown();
       } else {
-        countDown.text(counter.toString());
+        //fire confirm modal
+        e.preventDefault();
+        modal.toggleClass("is-visible");
       }
-    }, 1000);
-  };
+    }
 
-  thisPopup.unload = function () {
-    clearInterval(timer);
+    modalToggle.click(showMConfirmModal);
 
-    popup.fadeOut("250", function () {
-      container.animate(
-        {
-          opacity: "1"
-        },
-        250
-      );
+    $(".btn-cancel").click(function(e) {
+      modal.removeClass("is-visible");
     });
-  };
-}
+  });
 </script>
 
 </body>
