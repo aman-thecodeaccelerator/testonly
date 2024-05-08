@@ -452,36 +452,34 @@ form .two-col-field:last-child .form-control {
 
 /* copy to clipboard css */
 
-.clipboard {
+/* .clipboard {
   position: relative;
-}
+} */
 /* You just need to get this field */
 .copy-input {
-  max-width: 275px;
-  width: 100%;
   cursor: pointer;
   background-color: #eaeaeb;
-  border: none;
-  color: #6c6c6c;
+  border:none;
+  color:#6c6c6c;
   font-size: 14px;
   border-radius: 5px;
   padding: 15px 45px 15px 15px;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .copy-input:focus {
   outline: none;
 }
 
 .copy-btn {
-  width: 40px;
+  width:40px;
   background-color: #eaeaeb;
   font-size: 18px;
   padding: 6px 9px;
   border-radius: 5px;
-  border: none;
-  color: #6c6c6c;
-  margin-left: -50px;
-  transition: all 0.4s;
+  border:none;
+  color:#6c6c6c;
+  margin-left:-50px;
+  transition: all .4s;
 }
 /* .copy-btn:hover {
   transform: scale(1.3);
