@@ -616,7 +616,8 @@ $(document).on('click', '.remove-row-cta', function() {
 </script> -->
 
 <script>
-  $(document).on("click", ".js-add-row", function() {
+
+$(document).on("click", ".js-add-row", function() {
     $(".add-row-section").append(
       $(".add-row-section")
         .find(".two-col-field:last")
@@ -629,7 +630,21 @@ $(document).on('click', '.remove-row-cta', function() {
     $(".add-row-section")
       .find(".two-col-field:last")
       .remove();
-  });
+});
+  // $(document).on("click", ".js-add-row", function() {
+  //   $(".add-row-section").append(
+  //     $(".add-row-section")
+  //       .find(".two-col-field:last")
+  //       .clone()
+  //   );
+  //   $(".two-col-field:last input").val("");
+  // });
+
+  // $(document).on("click", ".js-del-row", function() {
+  //   $(".add-row-section")
+  //     .find(".two-col-field:last")
+  //     .remove();
+  // });
 </script>
 
   </body>
