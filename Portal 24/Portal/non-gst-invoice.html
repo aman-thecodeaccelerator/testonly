@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style1.css" />
-    <title>GST Invoice</title>
+    <title>Non GST Invoice</title>
   </head>
   <body>
     <main>
@@ -554,6 +554,54 @@
                 </button>
               </div>
             </form>
+            <!-- add client popup -->
+            <div class="add-client-main-popup">
+              <div class="add-client-popup">
+                <div class="main-box">
+                  <div class="title-with-close">
+                    <h4>Add Client</h4>
+                    <img
+                      class="close-btn"
+                      src="images/close-btn.svg"
+                      alt="close-btn"
+                    />
+                  </div>
+                  <form action="" class="popup-form">
+                    <div class="two-col-field">
+                      <div class="form-control">
+                        <label for="name">Client Name</label>
+                        <input type="text" placeholder="Enter client name" />
+                      </div>
+
+                      <div class="form-control">
+                        <label for="companyname">Company Name</label>
+                        <input type="text" placeholder="Enter company name" />
+                      </div>
+                    </div>
+                    <div class="two-col-field">
+                      <div class="form-control">
+                        <label for="name">Email</label>
+                        <input type="text" placeholder="Enter email address" />
+                      </div>
+
+                      <div class="form-control">
+                        <label for="companyname">CIN</label>
+                        <input type="text" placeholder="CIN" />
+                      </div>
+                    </div>
+                    <div class="two-col-field">
+                      <div class="form-control">
+                        <label for="name">GSTIN/UIN</label>
+                        <input type="text" placeholder="Enter GSTIN/UIN" />
+                      </div>
+                    </div>
+                    <button type="submit" fdprocessedid="5jv0z">
+                      <span><img src="images/cta-icon.svg"/></span>Save
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -579,6 +627,19 @@
         $(".add-row-section")
           .find(".two-col-field:last")
           .remove();
+      });
+    </script>
+
+    <!-- Add client popup js -->
+    <script>
+      $(document).ready(function() {
+        $(".add-more").click(function() {
+          $(".add-client-main-popup").fadeIn();
+        });
+
+        $(".close-btn").click(function() {
+          $(".add-client-main-popup").fadeOut();
+        });
       });
     </script>
   </body>
