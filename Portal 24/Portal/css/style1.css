@@ -513,3 +513,30 @@ form .two-col-field:last-child .form-control {
   border-radius: 5px;
   transition: 0.4s opacity;
 }
+
+.client-form .two-col-field:last-child {
+  justify-content: start;
+  position: relative;
+}
+.client-form .two-col-field:last-child .form-control:last-child {
+  max-width: 45%;
+}
+.client-form .two-col-field .form-control code {
+  display: none;
+}
+
+.client-form .two-col-field .form-control #unicodeCharacterId {
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  border: 1px solid #e8e9f3;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  height: 57px;
+  width: 50px;
+  max-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
