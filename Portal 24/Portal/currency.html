@@ -469,7 +469,7 @@
                     <td class="symbol">₹</td>
                     <td>
                         <a href="currency-edit-page.html"><img src="images/edit-icon.svg"></a>
-                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                        <a class="delete-icon" href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -479,7 +479,7 @@
                     <td class="symbol">$</td>
                     <td>
                         <a href="currency-edit-page.html"><img src="images/edit-icon.svg"></a>
-                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                        <a class="delete-icon" href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
                     </td>
                 </tr>
                 <tr>
@@ -489,7 +489,7 @@
                     <td class="symbol">£</td>
                     <td>
                         <a href="currency-edit-page.html"><img src="images/edit-icon.svg"></a>
-                        <a href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
+                        <a class="delete-icon" href="javascript:void(0);"><img src="images/trash-icon.svg"></a>
                     </td>
                 </tr>
               </tbody>
@@ -505,6 +505,20 @@
 
     </div>
   </div>
+
+  <div class="confirm-popup">
+    <div class="popup-box">
+      <div class="main">
+        <img src="images/w-popup.svg" alt="w-popup" />
+        <h4>Are you sure want to delete this item ?</h4>
+        <div class="cta-box">
+          <button class="confirm-cta">Confirm</button>
+          <button class="cancel-cta">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </main>
 
 
@@ -669,6 +683,18 @@ $(document).ready(function() {
     false
   );
   
+</script>
+
+<script>
+  $(document).ready(function() {
+    $(".delete-icon").click(function() {
+      $(".confirm-popup").fadeIn();
+    });
+
+    $(".cancel-cta").click(function() {
+      $(".confirm-popup").fadeOut();
+    });
+  });
 </script>
 
 </body>
