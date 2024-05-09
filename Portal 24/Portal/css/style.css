@@ -407,7 +407,7 @@ h6 {
   background-repeat: no-repeat;
   background-size: 200px;
   position: relative;
-  margin: 0 auto;
+  margin: 10px auto 0;
 }
 
 .dashboard
@@ -1238,5 +1238,28 @@ form textarea::placeholder {
 @media (max-width: 575.98px) {
   .dashboard .navigation-with-content .main .title h4 {
     font-size: 16px;
+  }
+  form textarea {
+    height: 90px;
+  }
+  .dashboard
+    .navigation-with-content
+    .main-content
+    .form-section
+    .upload-logo
+    .dragdrop
+    .area {
+    max-width: 190px;
+  }
+  .dashboard
+    .navigation-with-content
+    .main-content
+    .form-section
+    .upload-logo
+    .dragdrop
+    .drop-zone__thumb {
+    width: 150px;
+    height: 150px;
+    background-size: 150px;
   }
 }
