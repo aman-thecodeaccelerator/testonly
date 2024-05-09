@@ -476,12 +476,91 @@
                         
           </form>
 
-          <button type="submit"><span><img src="images/cta-icon.svg"></span>Update</button>
+          <button type="submit" class="modal-toggle"><span><img src="images/cta-icon.svg"></span>Update</button>
     </section>
 
     </div>
 </div>
+
+<section class="popup">
+  <div class="modal-toggle"></div>
+  <div class="popup__content">
+    <img src="images/success-icon.svg" />
+    <h2>Your data has successfully submitted !</h2>
+    <!-- <a id="popup-close" class="done" href="javascript:void(0);"
+      >Continue<span id="countDown"></span
+    ></a> -->
+    <div id="count-loading" class="count-wrap done">
+      Continue
+      <span class="n" id="countdown-number"></span>
+      <div id="loader"></div>
+    </div>
+  </div>
+</section>
+
 </main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+<script>
+  $(".count-wrap").click(function() {
+    $(".popup").removeClass("is-visible");
+  });
+</script>
+
+<script>
+  $(function() {
+    //modal
+    const modal = $(".popup");
+    const modalToggle = $(".modal-toggle");
+    const modalWrapper = $(".popup__content");
+    const modalHeight = modalWrapper.height();
+
+    //countdown
+    function coundDown() {
+      console.log("countdown");
+      var countdownNumberEl = document.getElementById("countdown-number");
+      var countdown = 5;
+      countdownNumberEl.textContent = countdown;
+      var downloadTimer = setInterval(function() {
+        countdown--; // 5 to 0
+        countdownNumberEl.textContent = countdown;
+
+        if (countdown > 0) {
+          modalToggle.unbind("click", showMConfirmModal);
+        } else {
+          modalToggle.bind("click", showMConfirmModal);
+          clearInterval(downloadTimer);
+          modal.removeClass("is-visible");
+        }
+      }, 1000);
+    }
+
+    //show modal
+    function showMConfirmModal(e) {
+      console.log("icon click");
+      const modalPosY = $(document).outerHeight() / 2 - modalHeight / 2;
+      modalWrapper.css("margin-to", modalPosY);
+      //fire countedown modal
+      if ($("#count-loading").length) {
+        e.preventDefault();
+        modal.addClass("is-visible");
+        coundDown();
+      } else {
+        //fire confirm modal
+        e.preventDefault();
+        modal.toggleClass("is-visible");
+      }
+    }
+
+    modalToggle.click(showMConfirmModal);
+
+    $(".btn-cancel").click(function(e) {
+      modal.removeClass("is-visible");
+    });
+  });
+</script>
 
 </body>
 </html>
