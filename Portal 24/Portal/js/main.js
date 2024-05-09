@@ -98,3 +98,19 @@ $(document).ready(function() {
     $(this).addClass("active");
   });
 });
+
+// Mobile Slide bar
+
+$(document).ready(function() {
+  $(".menu-icon").click(function() {
+    $(".side-bar").css("transform", "translateX(0px)");
+  });
+
+  $(".close-menu").click(function() {
+    $(".side-bar").css("transform", "translateX(-800px)");
+  });
+
+  $(".blank-area").click(function() {
+    $(".side-bar").css("transform", "translateX(-800px)");
+  });
+});

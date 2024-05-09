@@ -540,3 +540,21 @@ form .two-col-field:last-child .form-control {
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 575.98px) {
+  form .two-col-field {
+    display: block;
+  }
+  form .form-control {
+    width: 100%;
+  }
+  form .form-control {
+    margin-bottom: 20px;
+  }
+  form .two-col-field:last-child .form-control:first-child {
+    margin-bottom: 20px;
+  }
+  form .two-col-field:last-child .form-control:last-child {
+    margin-bottom: 0;
+  }
+}
