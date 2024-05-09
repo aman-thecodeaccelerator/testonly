@@ -476,16 +476,14 @@
 
                 <div class="form-control">
                   <label for="symbol"
-                    >Currency Symbols <span>(HTML Unicode UTF-8)</span></label
-                  >
-                  <input
-                    id="inputId"
-                    type="text"
-                    value=""
-                    name="symbol"
-                    placeholder="e. g. 8377"
-                  />
-                  <span id="unicodeCharacterId"> </span>
+                    >Currency Symbols <span>(HTML Unicode UTF-8)</span></label>
+                  <input id="inputId" type="text" class="code" name="symbol" placeholder="e. g."/>
+                  <div class="result">                  
+                        <input id="symbol" type="text" value="" name="symbol" placeholder="">
+                      <span id="unicodeCharacterId">₣</span>
+                  </div>
+                  <!-- <span id="unicodeCharacterId"> </span>
+                  <input  id="symbol" type="text" value="" name="symbol" placeholder=""/> -->
                   <code>&amp;#<span id="unicodeNumberId">8377</span>;</code>
                 </div>
               </div>

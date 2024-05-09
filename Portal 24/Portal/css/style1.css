@@ -190,11 +190,27 @@ form label span {
   color: #707070;
   font-weight: 500;
 }
-form input#code {
+form input.code {
   width: 88%;
   display: inline-block;
 }
-form input#symbol {
+form .form-control code {
+  display: none;
+}
+form .result {
+  position: relative;
+}
+form .form-control #unicodeCharacterId {
+  position: absolute;
+  top: 40%;
+  right: 43%;
+}
+/* form input#symbol {
+  width: 10%;
+  display: inline-block;
+  margin: 0 0 0 6px;
+} */
+form .form-control .result {
   width: 10%;
   display: inline-block;
   margin: 0 0 0 6px;
@@ -482,31 +498,30 @@ form .two-col-field:last-child .form-control {
 /* You just need to get this field */
 .copy-input {
   cursor: pointer;
-  background-color: #eaeaeb;
   border: none;
-  color: #6c6c6c;
+  stroke: none;
   font-size: 14px;
-  border-radius: 5px;
-  padding: 15px 45px 15px 15px;
-  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #969696;
 }
 .copy-input:focus {
+  outline: none;
   outline: none;
 }
 
 .copy-btn {
-  width: 40px;
-  background-color: #eaeaeb;
-  font-size: 18px;
-  padding: 6px 9px;
-  border-radius: 5px;
   border: none;
-  color: #6c6c6c;
-  margin-left: -50px;
   transition: all 0.4s;
+  padding: 0;
+  margin-top: 0;
+  background: transparent;
 }
 .copy-btn:focus {
   outline: none;
+}
+.copy-input:focus-visible {
+  outline: none;
+  background: transparent;
 }
 .copied {
   width: 100px;
