@@ -42,6 +42,7 @@ h6 {
 .dashboard .side-bar {
   width: 100%;
   max-width: 296px;
+  min-width: 296px;
   position: sticky;
   top: 0;
   height: 100%;
@@ -805,7 +806,7 @@ form textarea::placeholder {
   z-index: 10;
 }
 .main-content .col-md-12 .add-btn button {
-  padding: 11px 20px;
+  padding: 11px 20px 12px;
   margin: 0;
   line-height: 1.5;
 }
@@ -1156,10 +1157,27 @@ form textarea::placeholder {
 
 /* Media Q. */
 
+@media (max-width: 1199.98px) {
+  .dataTable-bottom {
+    display: block;
+  }
+  .dataTable-pagination {
+    margin: 30px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dataTable-pagination::before,
+  .dataTable-pagination::after {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   .dashboard .side-bar,
   .dashboard .side-bar .main-section {
     max-width: 250px;
+    min-width: 250px;
   }
 }
 
@@ -1233,19 +1251,6 @@ form textarea::placeholder {
   .dashboard .side-bar .main-section .menu-section .list-items li p {
     font-size: 14px;
   }
-  .confirm-popup .popup-box {
-    padding: 34px 20px 34px 20px;
-}
-.confirm-popup .popup-box .main img {
-  margin-bottom: 28px;
-  max-width: 70px;
-}
-.confirm-popup .popup-box .main .cta-box {
-  margin-top: 30px;
-}
-.confirm-popup .popup-box .main h4 {
-  font-size: 20px;
-}
 }
 
 @media (max-width: 575.98px) {

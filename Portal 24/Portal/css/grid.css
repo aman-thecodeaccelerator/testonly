@@ -140,10 +140,10 @@
   width: 91.6666666667%;
 }
 @media (min-width: 576px) {
-  .container,
+  /* .container,
   .container-sm {
     max-width: 540px;
-  }
+  } */
   .col-sm {
     flex: 1 0 0%;
   }
