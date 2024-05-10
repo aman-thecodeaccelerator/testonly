@@ -276,12 +276,28 @@ form .two-col-field:last-child .form-control {
   border: 1px solid #e8e9f3;
   padding: 17px 18px 15px;
   line-height: 1;
+  width: 9%;
+  display: inline-block;
+  margin: 0px 0 0 4px;
+  vertical-align: bottom;
+}
+.non-gst-form button.add-more {
+  color: #707070;
+  font-size: 25px;
+  height: max-content;
+  background: #fff;
+  border: 1px solid #e8e9f3;
+  padding: 17px 18px 15px;
+  line-height: 1;
   width: 10%;
   display: inline-block;
   margin: 0px 0 0 6px;
   vertical-align: bottom;
 }
 .gst-form .form-control {
+  position: relative;
+}
+.non-gst-form .form-control {
   position: relative;
 }
 .gst-form .form-control .calendar-icon {
@@ -328,6 +344,12 @@ form .two-col-field:last-child .form-control {
   width: 88%;
   display: inline-block;
   align-content: center;
+}
+.non-gst-form .basic-info #select-client {
+  width: 88%;
+  display: inline-block;
+  align-content: center;
+  margin-right: 0;
 }
 .gst-form .add-row-section .two-col-field {
 	position: relative;
@@ -558,6 +580,10 @@ form .two-col-field:last-child .form-control {
   .section-padding {
     padding: 25px 15px;
   }
+  .non-gst-form .basic-info button.add-more {
+    padding: 17px 10px 15px;
+    margin: 0px 0 0 5px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -583,7 +609,15 @@ form .total-amount-full .two-col-field:last-child .form-control {
   width: 14%;
   margin: 0px 0 0 1px;
 }
+.non-gst-form .basic-info button.add-more {
+  padding: 17px 10px 15px;
+  width: 14%;
+  margin: 0px 0 0 1px;
+}
 .gst-form .basic-info #select-client {
+  width: 85%;
+}
+.non-gst-form .basic-info #select-client {
   width: 85%;
 }
 .non-gst-form .add-row-section .two-col-field .form-control:first-child {
@@ -591,6 +625,19 @@ form .total-amount-full .two-col-field:last-child .form-control {
 }
 .non-gst-form .total-amount input {
   max-width: 315px;
+}
+}
+
+@media (max-width: 767.98px) {
+  .two-col-content-with-cta {
+    display: flex;
+}
+  .two-col-content-with-cta > * {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.two-col-content-with-cta .invoice-col:last-child {
+  margin-bottom: 0;
 }
 }
 
@@ -622,7 +669,14 @@ form .form-control #unicodeCharacterId {
 .gst-form .basic-info #select-client {
   width: 84%;
 }
+.non-gst-form .basic-info #select-client {
+  width: 84%;
+}
 .gst-form button.add-more {
+  width: 14%;
+  margin: 0px 0 0 3px;
+}
+.non-gst-form button.add-more {
   width: 14%;
   margin: 0px 0 0 3px;
 }
@@ -632,13 +686,29 @@ form .form-control #unicodeCharacterId {
 .non-gst-form .total-amount input {
   max-width: 230px;
 }
+.two-col-content-with-cta .invoice-col .spacer {
+  padding: 28px;
+}
+.two-col-content-with-cta .invoice-col .spacer .invoice-cta {
+  padding: 18px 50px;
+}
+.two-col-content-with-cta .invoice-col .spacer h4 {
+  font-size: 20px;
+}
 }
 
 @media (max-width: 399.98px) {
 .gst-form .basic-info #select-client {
   width: 84%;
 }
+.non-gst-form .basic-info #select-client {
+  width: 84%;
+}
 .gst-form button.add-more {
+  padding: 17px 8px 15px;
+  margin: 0px 0 0 1px;
+}
+.non-gst-form button.add-more {
   padding: 17px 8px 15px;
   margin: 0px 0 0 1px;
 }
@@ -681,7 +751,14 @@ form label span {
   .gst-form .basic-info #select-client {
     width: 83%;
   }
+  .non-gst-form .basic-info #select-client {
+    width: 83%;
+  }
   .gst-form button.add-more {
+    padding: 17px 10px 15px;
+    width: 13%;
+  }
+  .non-gst-form button.add-more {
     padding: 17px 10px 15px;
     width: 13%;
   }
@@ -698,9 +775,16 @@ form .form-control .result {
 .gst-form .basic-info #select-client {
   width: 83%;
 }
+.non-gst-form .basic-info #select-client {
+  width: 83%;
+}
 .gst-form button.add-more {
   padding: 17px 10px 15px;
   width: 13%;
+}
+.non-gst-form button.add-more {
+  padding: 17px 10px 15px;
+  width: 14%;
 }
 .gst-form .total-amount-full {
   margin-bottom: 6px;
@@ -709,6 +793,9 @@ form .form-control .result {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
 .gst-form button.add-more {
+  padding: 17px 10px 15px;
+}
+.non-gst-form button.add-more {
   padding: 17px 10px 15px;
 }
 .gst-form .total-amount-full {
