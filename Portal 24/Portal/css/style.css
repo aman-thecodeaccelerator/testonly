@@ -42,6 +42,7 @@ h6 {
 .dashboard .side-bar {
   width: 100%;
   max-width: 296px;
+  min-width: 296px;
   position: sticky;
   top: 0;
   height: 100%;
@@ -1176,6 +1177,7 @@ form textarea::placeholder {
   .dashboard .side-bar,
   .dashboard .side-bar .main-section {
     max-width: 250px;
+    min-width: 250px;
   }
 }
 
@@ -1248,6 +1250,26 @@ form textarea::placeholder {
   }
   .dashboard .side-bar .main-section .menu-section .list-items li p {
     font-size: 14px;
+  }
+
+  .dataTable-top {
+    display: block;
+    padding: 0;
+  }
+  .dataTable-top .dataTable-search {
+    margin-top: 25px;
+    padding-left: 60px;
+  }
+  .dataTable-top::after {
+    right: inherit;
+    left: 0;
+    bottom: 14px;
+  }
+
+  .main-content .col-md-12 .add-btn {
+    top: 70px;
+    right: inherit;
+    left: 262px;
   }
 }
 
