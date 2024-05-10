@@ -639,6 +639,7 @@ form .total-amount-full .two-col-field:last-child .form-control {
 .two-col-content-with-cta .invoice-col:last-child {
   margin-bottom: 0;
 }
+
 }
 
 @media (max-width: 575.98px) {
@@ -694,6 +695,37 @@ form .form-control #unicodeCharacterId {
 }
 .two-col-content-with-cta .invoice-col .spacer h4 {
   font-size: 20px;
+}
+.dataTable-top {
+  max-width: 100%;
+  padding-right: 0;
+  display: block;
+}
+.dataTable-input {
+  margin-left: 65px;
+  max-width: 160px;
+}
+.dataTable-top::after {
+  right: auto;
+  bottom: 15px;
+  left: 3px;
+}
+.dataTable-input {
+  margin-top: 8px;
+}
+.main-content .col-md-12 .add-btn {
+  top: 53px;
+}
+.main-content .col-md-12 .add-btn button {
+  padding: 11px 20px 11px;
+}
+.dataTable-pagination a {
+  font-size: 14px;
+  margin-left: 5px;
+  padding: 8px 10px;
+}
+.dataTable-pagination {
+  justify-content: center;
 }
 }
 
