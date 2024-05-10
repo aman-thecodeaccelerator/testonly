@@ -1233,6 +1233,19 @@ form textarea::placeholder {
   .dashboard .side-bar .main-section .menu-section .list-items li p {
     font-size: 14px;
   }
+  .confirm-popup .popup-box {
+    padding: 34px 20px 34px 20px;
+}
+.confirm-popup .popup-box .main img {
+  margin-bottom: 28px;
+  max-width: 70px;
+}
+.confirm-popup .popup-box .main .cta-box {
+  margin-top: 30px;
+}
+.confirm-popup .popup-box .main h4 {
+  font-size: 20px;
+}
 }
 
 @media (max-width: 575.98px) {

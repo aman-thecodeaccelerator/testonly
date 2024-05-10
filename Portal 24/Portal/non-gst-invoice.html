@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/style1.css" />
     <title>Non GST Invoice</title>
@@ -442,6 +443,7 @@
 
           <!-- Content -->
           <div class="main-content">
+            <div class="container">
             <form action="" class="non-gst-form">
               <div class="basic-info">
                 <div class="two-col-field">
@@ -452,8 +454,9 @@
                       <option value="1">1</option>
                       <option value="2">2</option>
                     </select>
+                    <button type="button" class="add-more">+</button>
                   </div>
-                  <button type="button" class="add-more">+</button>
+                  <!-- <button type="button" class="add-more">+</button> -->
                   <div class="form-control">
                     <label for="companyname">Invoice Number</label>
                     <input type="text" placeholder="1234567890" />
@@ -548,6 +551,7 @@
                 </button>
               </div>
             </form>
+          </div>
             <!-- add client popup -->
             <div class="add-client-main-popup">
               <div class="add-client-popup">
