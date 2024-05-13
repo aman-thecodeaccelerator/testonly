@@ -1306,7 +1306,12 @@ form textarea::placeholder {
     padding: 16px;
     max-width: 210px;
   }
-  
+  .dataTable-bottom {
+    overflow-x: scroll;
+}
+.dataTable-pagination {
+  justify-content: start;
+}
 }
 
 @media (max-width: 380.98px) {
