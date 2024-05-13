@@ -1298,4 +1298,13 @@ form textarea::placeholder {
     height: 150px;
     background-size: 150px;
   }
+  .dashboard .navigation-with-content .main-content .form-section .upload-logo .dragdrop p {
+    font-size: 14px;
+  }
+  .dashboard .navigation-with-content .main-content .form-section .upload-logo .dragdrop .area {
+    font-size: 32px;
+    padding: 16px;
+    max-width: 234px;
+  }
+  
 }

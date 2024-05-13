@@ -827,9 +827,6 @@ form .form-control #unicodeCharacterId {
 form .add-row-section input[type="text"] {
   margin-bottom: 20px;
 }
-form .add-row-section input[type="text"] {
-  margin-bottom: 20px;
-}
 }
 
 @media (max-width: 380.98px) {
