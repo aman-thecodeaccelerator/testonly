@@ -1318,12 +1318,14 @@ form textarea::placeholder {
 }
 .main-content .col-md-12 .add-btn {
   left: 214px;
-  top: 84px;
 }
 .dataTable-input {
   max-width: 140px;
 }
 .main-content .col-md-12 .add-btn button {
   padding: 11px 10px 12px;
+}
+.dataTable-top {
+  padding-right: 0;
 }
 }
