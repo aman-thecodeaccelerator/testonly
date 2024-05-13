@@ -691,7 +691,7 @@ form .two-col-field:last-child .form-control {
   .two-col-content-with-cta .invoice-col .spacer h4 {
     font-size: 20px;
   }
-  .dataTable-top {
+  /* .dataTable-top {
     max-width: 100%;
     padding-right: 0;
     display: block;
@@ -707,21 +707,21 @@ form .two-col-field:last-child .form-control {
   }
   .dataTable-input {
     margin-top: 8px;
-  }
-  .main-content .col-md-12 .add-btn {
+  } */
+  /* .main-content .col-md-12 .add-btn {
     top: 53px;
-  }
+  } 
   .main-content .col-md-12 .add-btn button {
     padding: 11px 20px 11px;
-  }
-  .dataTable-pagination a {
+  } */
+  /* .dataTable-pagination a {
     font-size: 14px;
     margin-left: 5px;
     padding: 8px 10px;
   }
   .dataTable-pagination {
     justify-content: center;
-  }
+  } */
 
 }
 form input.code {
@@ -759,7 +759,7 @@ form .form-control #unicodeCharacterId {
 .two-col-content-with-cta .invoice-col .spacer h4 {
   font-size: 20px;
 }
-.dataTable-top {
+/* .dataTable-top {
   max-width: 100%;
   padding-right: 0;
   display: block;
@@ -773,21 +773,21 @@ form .form-control #unicodeCharacterId {
   right: auto;
   bottom: 15px;
   left: 3px;
-}
-.main-content .col-md-12 .add-btn {
+} */
+/* .main-content .col-md-12 .add-btn {
   top: 53px;
 }
 .main-content .col-md-12 .add-btn button {
   padding: 11px 12px 11px;
-}
-.dataTable-pagination a {
+} */
+/* .dataTable-pagination a {
   font-size: 14px;
   margin-left: 5px;
   padding: 8px 10px;
 }
 .dataTable-pagination {
   justify-content: center;
-}
+} */
 
 @media (max-width: 399.98px) {
   .gst-form .basic-info #select-client {
@@ -848,10 +848,10 @@ form .form-control {
 form label span {
   font-size: 12px;
 }
-.dataTable-input {
+/* .dataTable-input {
   margin-left: 58px;
   max-width: 138px;
-}
+} */
 }
 
 @media (min-width: 1200px) and (max-width: 1400.98px) {

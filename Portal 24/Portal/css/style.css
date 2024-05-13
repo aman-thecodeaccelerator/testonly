@@ -1308,3 +1308,22 @@ form textarea::placeholder {
   }
   
 }
+
+@media (max-width: 380.98px) {
+  .dataTable-input {
+    max-width: 135px;
+}
+.dataTable-top .dataTable-search {
+	padding-left: 56px;
+}
+.main-content .col-md-12 .add-btn {
+  left: 214px;
+  top: 84px;
+}
+.dataTable-input {
+  max-width: 140px;
+}
+.main-content .col-md-12 .add-btn button {
+  padding: 11px 10px 12px;
+}
+}
