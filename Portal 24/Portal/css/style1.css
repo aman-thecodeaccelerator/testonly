@@ -521,9 +521,6 @@ form .two-col-field:last-child .form-control {
 
 /* copy to clipboard css */
 
-/* .clipboard {
-  position: relative;
-} */
 /* You just need to get this field */
 .copy-input {
   cursor: pointer;
@@ -537,7 +534,6 @@ form .two-col-field:last-child .form-control {
   outline: none;
   outline: none;
 }
-
 .copy-btn {
   border: none;
   transition: all 0.4s;
@@ -567,11 +563,10 @@ form .two-col-field:last-child .form-control {
   transition: 0.4s opacity;
 }
 
-/* .dashboard .navigation-with-content .main-content {
+.dashboard .navigation-with-content .main-content {
   padding: 25px 0px;
-} */
-
-.popup .popup__content .done {
+}
+*/ .popup .popup__content .done {
   cursor: pointer;
 }
 
