@@ -830,24 +830,6 @@ form .form-control #unicodeCharacterId {
 @media (max-width: 380.98px) {
   form .form-control .result {
     width: 18%;
-<<<<<<< HEAD
-  }
-  form input.code {
-    width: 80%;
-  }
-  .section-padding {
-    padding: 25px 0px;
-  }
-  form {
-    padding: 30px 10px;
-  }
-  form .form-control {
-    padding: 0 10px;
-  }
-  form label span {
-    font-size: 12px;
-  }
-=======
 }
 form input.code {
   width: 80%;
@@ -868,7 +850,6 @@ form label span {
   margin-left: 58px;
   max-width: 138px;
 }
->>>>>>> f940e8c72b1009f8f9b9ec9a658c28fc52b74949
 }
 
 @media (min-width: 1200px) and (max-width: 1400.98px) {
