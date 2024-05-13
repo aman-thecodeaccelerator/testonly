@@ -562,11 +562,20 @@ form .two-col-field:last-child .form-control {
   border-radius: 5px;
   transition: 0.4s opacity;
 }
+<<<<<<< HEAD
 
 .dashboard .navigation-with-content .main-content {
   padding: 25px 0px;
 }
 */ .popup .popup__content .done {
+=======
+/* .dashboard .navigation-with-content .main-content {
+  padding: 25px 0px;
+} */
+
+
+.popup .popup__content .done {
+>>>>>>> f940e8c72b1009f8f9b9ec9a658c28fc52b74949
   cursor: pointer;
 }
 
@@ -653,6 +662,7 @@ form .two-col-field:last-child .form-control {
   }
   form .form-control .result {
     width: 16%;
+<<<<<<< HEAD
   }
   form input.code {
     width: 82%;
@@ -720,6 +730,73 @@ form .two-col-field:last-child .form-control {
   .dataTable-pagination {
     justify-content: center;
   }
+=======
+}
+form input.code {
+  width: 82%;
+}
+form .form-control #unicodeCharacterId {
+  font-size: 14px;
+}
+.gst-form .basic-info #select-client {
+  width: 84%;
+}
+.non-gst-form .basic-info #select-client {
+  width: 84%;
+}
+.gst-form button.add-more {
+  width: 14%;
+  margin: 0px 0 0 3px;
+}
+.non-gst-form button.add-more {
+  width: 14%;
+  margin: 0px 0 0 3px;
+}
+.gst-form .total-amount-full {
+  margin-bottom: 0;
+}
+.non-gst-form .total-amount input {
+  max-width: 230px;
+}
+.two-col-content-with-cta .invoice-col .spacer {
+  padding: 28px;
+}
+.two-col-content-with-cta .invoice-col .spacer .invoice-cta {
+  padding: 18px 50px;
+}
+.two-col-content-with-cta .invoice-col .spacer h4 {
+  font-size: 20px;
+}
+.dataTable-top {
+  max-width: 100%;
+  padding-right: 0;
+  display: block;
+}
+.dataTable-input {
+  margin-left: 65px;
+  max-width: 160px;
+  margin-top: 8px;
+}
+.dataTable-top::after {
+  right: auto;
+  bottom: 15px;
+  left: 3px;
+}
+.main-content .col-md-12 .add-btn {
+  top: 53px;
+}
+.main-content .col-md-12 .add-btn button {
+  padding: 11px 12px 11px;
+}
+.dataTable-pagination a {
+  font-size: 14px;
+  margin-left: 5px;
+  padding: 8px 10px;
+}
+.dataTable-pagination {
+  justify-content: center;
+}
+>>>>>>> f940e8c72b1009f8f9b9ec9a658c28fc52b74949
 }
 
 @media (max-width: 399.98px) {
@@ -753,6 +830,7 @@ form .two-col-field:last-child .form-control {
 @media (max-width: 380.98px) {
   form .form-control .result {
     width: 18%;
+<<<<<<< HEAD
   }
   form input.code {
     width: 80%;
@@ -769,6 +847,28 @@ form .two-col-field:last-child .form-control {
   form label span {
     font-size: 12px;
   }
+=======
+}
+form input.code {
+  width: 80%;
+}
+.section-padding {
+  padding: 25px 0px;
+}
+form {
+  padding: 30px 10px;
+}
+form .form-control {
+  padding: 0 10px;
+}
+form label span {
+  font-size: 12px;
+}
+.dataTable-input {
+  margin-left: 58px;
+  max-width: 138px;
+}
+>>>>>>> f940e8c72b1009f8f9b9ec9a658c28fc52b74949
 }
 
 @media (min-width: 1200px) and (max-width: 1400.98px) {
