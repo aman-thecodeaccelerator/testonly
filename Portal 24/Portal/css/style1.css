@@ -661,6 +661,14 @@ form .two-col-field:last-child .form-control {
 form input.code {
   width: 89%;
 }
+.add-client-main-popup {
+  overflow-y: scroll;
+}
+.add-client-main-popup .add-client-popup {
+  transform: translate(-50%, -22%);
+  width: 90%;
+  overflow-y: scroll;
+}
 }
 
 @media (max-width: 575.98px) {
