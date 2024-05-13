@@ -570,6 +570,10 @@ form .two-col-field:last-child .form-control {
   cursor: pointer;
 }
 
+.dataTable-selector {
+	background-image: none;
+}
+
 @media (max-width: 1199.98px) {
   .section-padding {
     padding: 25px 0px;

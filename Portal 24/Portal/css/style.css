@@ -599,8 +599,8 @@ form textarea::placeholder {
   background-position-x: 87%;
   background-position-y: 50%;
   background-size: 17px;
-  /* -webkit-appearance: none;
-  -moz-appearance: none; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
   text-indent: 1px;
   text-overflow: "";
   cursor: pointer;
@@ -1009,8 +1009,8 @@ form textarea::placeholder {
   background-position-x: 96%;
   background-position-y: 53%;
   background-size: 15px;
-  /* -webkit-appearance: none;
-  -moz-appearance: none; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
   text-indent: 1px;
   text-overflow: "";
   cursor: pointer;
