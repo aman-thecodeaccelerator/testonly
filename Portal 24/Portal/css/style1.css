@@ -100,7 +100,6 @@ table td:first-child {
 .company-section .company-table .dataTable-table {
   max-width: 100%;
   width: 100%;
-  min-width: inherit;
 }
 /* table tr td:last-child {
   text-align: right;
@@ -191,7 +190,7 @@ form label span {
   font-weight: 500;
 }
 form input.code {
-  width: 88%;
+  width: 87%;
   display: inline-block;
 }
 form .form-control code {
@@ -573,7 +572,7 @@ form .two-col-field:last-child .form-control {
 
 @media (max-width: 1199.98px) {
   .section-padding {
-    padding: 25px 15px;
+    padding: 25px 0px;
   }
   .non-gst-form .basic-info button.add-more {
     padding: 17px 10px 15px;
@@ -634,6 +633,12 @@ form .two-col-field:last-child .form-control {
   .two-col-content-with-cta .invoice-col:last-child {
     margin-bottom: 0;
   }
+  form .form-control .result {
+    width: 10%;
+}
+form input.code {
+  width: 89%;
+}
 }
 
 @media (max-width: 575.98px) {
@@ -653,12 +658,14 @@ form .two-col-field:last-child .form-control {
     margin-bottom: 0;
   }
   form .form-control .result {
-    width: 16%;
-
+    width: 15%;
   }
   form input.code {
-    width: 82%;
+    width: 83%;
   }
+  /* form input.code {
+    width: 82%;
+  } */
   form .form-control #unicodeCharacterId {
     font-size: 14px;
   }
@@ -724,9 +731,9 @@ form .two-col-field:last-child .form-control {
   } */
 
 }
-form input.code {
+/* form input.code {
   width: 82%;
-}
+} */
 form .form-control #unicodeCharacterId {
   font-size: 14px;
 }
@@ -895,6 +902,9 @@ form label span {
   .gst-form .total-amount-full {
     margin-bottom: 6px;
   }
+  form label span {
+    font-size: 12px;
+}
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -907,4 +917,7 @@ form label span {
   .gst-form .total-amount-full {
     margin-bottom: 6px;
   }
+  form .form-control .result {
+    width: 12%;
+}
 }
