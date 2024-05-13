@@ -562,20 +562,12 @@ form .two-col-field:last-child .form-control {
   border-radius: 5px;
   transition: 0.4s opacity;
 }
-<<<<<<< HEAD
-
-.dashboard .navigation-with-content .main-content {
-  padding: 25px 0px;
-}
-*/ .popup .popup__content .done {
-=======
 /* .dashboard .navigation-with-content .main-content {
   padding: 25px 0px;
 } */
 
 
 .popup .popup__content .done {
->>>>>>> f940e8c72b1009f8f9b9ec9a658c28fc52b74949
   cursor: pointer;
 }
 
@@ -662,7 +654,7 @@ form .two-col-field:last-child .form-control {
   }
   form .form-control .result {
     width: 16%;
-<<<<<<< HEAD
+
   }
   form input.code {
     width: 82%;
@@ -730,7 +722,7 @@ form .two-col-field:last-child .form-control {
   .dataTable-pagination {
     justify-content: center;
   }
-=======
+
 }
 form input.code {
   width: 82%;
@@ -796,8 +788,6 @@ form .form-control #unicodeCharacterId {
 .dataTable-pagination {
   justify-content: center;
 }
->>>>>>> f940e8c72b1009f8f9b9ec9a658c28fc52b74949
-}
 
 @media (max-width: 399.98px) {
   .gst-form .basic-info #select-client {
@@ -825,6 +815,21 @@ form .form-control #unicodeCharacterId {
   .non-gst-form .total-amount input {
     max-width: 100%;
   }
+  form .two-col-field {
+    display: block;
+}
+.gst-form .form-control {
+  width: 100%;
+}
+.gst-form button.add-more {
+  width: 14%;
+}
+form .add-row-section input[type="text"] {
+  margin-bottom: 20px;
+}
+form .add-row-section input[type="text"] {
+  margin-bottom: 20px;
+}
 }
 
 @media (max-width: 380.98px) {
