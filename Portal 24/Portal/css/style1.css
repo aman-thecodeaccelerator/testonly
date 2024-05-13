@@ -486,11 +486,15 @@ form .two-col-field:last-child .form-control {
   box-sizing: border-box;
   margin-bottom: 20px;
 }
-.two-col-content-with-cta > * {
+/* .two-col-content-with-cta > * {
   max-width: 100%;
   padding-left: calc(var(--bs-gutter-x) / -2);
   padding-right: calc(var(--bs-gutter-x) / -2);
   box-sizing: border-box;
+  width: 50%;
+  text-align: center;
+} */
+.two-col-content-with-cta .invoice-col {
   width: 50%;
   text-align: center;
 }
@@ -502,7 +506,7 @@ form .two-col-field:last-child .form-control {
 .two-col-content-with-cta .invoice-col .spacer .invoice-cta {
   font-size: 15px;
   color: #17192b;
-  padding: 18px 96px;
+  padding: 18px 90px;
   background: #e8e9f3;
   border-radius: 7px;
   display: inline-block;
@@ -624,6 +628,20 @@ form .two-col-field:last-child .form-control {
   .non-gst-form .total-amount input {
     max-width: 315px;
   }
+  .two-col-content-with-cta .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+  .two-col-content-with-cta .invoice-col {
+    width: 100%;
+}
+.two-col-content-with-cta .invoice-col .spacer {
+  padding: 56px;
+  margin-bottom: 20px;
+}
+.two-col-content-with-cta .invoice-col:last-child .spacer {
+  margin-bottom: 0px;
+}
 }
 
 @media (max-width: 767.98px) {
@@ -761,15 +779,15 @@ form .form-control #unicodeCharacterId {
 .non-gst-form .total-amount input {
   max-width: 230px;
 }
-.two-col-content-with-cta .invoice-col .spacer {
+/* .two-col-content-with-cta .invoice-col .spacer {
   padding: 28px;
-}
-.two-col-content-with-cta .invoice-col .spacer .invoice-cta {
+} */
+/* .two-col-content-with-cta .invoice-col .spacer .invoice-cta {
   padding: 18px 50px;
-}
-.two-col-content-with-cta .invoice-col .spacer h4 {
+} */
+/* .two-col-content-with-cta .invoice-col .spacer h4 {
   font-size: 20px;
-}
+} */
 /* .dataTable-top {
   max-width: 100%;
   padding-right: 0;
@@ -835,9 +853,9 @@ form .form-control #unicodeCharacterId {
 .gst-form button.add-more {
   width: 14%;
 }
-form .add-row-section input[type="text"] {
+/* form .add-row-section input[type="text"] {
   margin-bottom: 20px;
-}
+} */
 }
 
 @media (max-width: 380.98px) {
@@ -873,7 +891,7 @@ form label span {
     width: 83%;
   }
   .gst-form button.add-more {
-    padding: 17px 10px 15px;
+    padding: 16px 10px 16px;
     width: 13%;
   }
   .non-gst-form button.add-more {
@@ -908,6 +926,12 @@ form label span {
   }
   form label span {
     font-size: 12px;
+}
+.two-col-content-with-cta .invoice-col .spacer {
+  padding: 40px;
+}
+.two-col-content-with-cta .invoice-col .spacer .invoice-cta {
+  padding: 18px 72px;
 }
 }
 
