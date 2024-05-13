@@ -33,8 +33,10 @@ h6 {
 .dashboard {
   display: flex;
   width: 100%;
-  justify-content: space-between;
   background-color: #f2f2f8;
+}
+.main-content .container {
+  max-width: 100%;
 }
 
 /* Sidebar */
@@ -180,7 +182,7 @@ h6 {
 
 .dashboard .navigation-with-content {
   width: 100%;
-  max-width: 81%;
+  max-width: 100%;
 }
 
 .dashboard .navigation-with-content .navigation-section {
