@@ -1251,6 +1251,24 @@ form textarea::placeholder {
   .dashboard .side-bar .main-section .menu-section .list-items li p {
     font-size: 14px;
   }
+
+  .dataTable-top {
+    display: block;
+  }
+
+  .dataTable-top .dataTable-search {
+    margin-top: 25px;
+    padding-left: 60px;
+  }
+  .dataTable-top::after {
+    right: inherit;
+    bottom: 15px;
+  }
+  .main-content .col-md-12 .add-btn {
+    top: 70px;
+    right: inherit;
+    left: 263px;
+  }
 }
 
 @media (max-width: 575.98px) {

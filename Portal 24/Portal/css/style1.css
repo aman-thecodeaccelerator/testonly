@@ -352,21 +352,21 @@ form .two-col-field:last-child .form-control {
   margin-right: 0;
 }
 .gst-form .add-row-section .two-col-field {
-	position: relative;
-	counter-increment: css-counter 1;
-	padding-left: 33px;
+  position: relative;
+  counter-increment: css-counter 1;
+  padding-left: 33px;
 }
 .gst-form .add-row-section .two-col-field::before {
-	content: counter(css-counter) ". ";
-	position: absolute;
-	top: 22px;
-	left: 18px;
-	font-size: 14px;
-	font-weight: 600;
-	color: #2c3053;
+  content: counter(css-counter) ". ";
+  position: absolute;
+  top: 22px;
+  left: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3053;
 }
 .gst-form .add-row-section .two-col-field:first-child::before {
-	top: 51px;
+  top: 51px;
 }
 
 .currency-section .main-content {
@@ -567,10 +567,9 @@ form .two-col-field:last-child .form-control {
   transition: 0.4s opacity;
 }
 
-.dashboard .navigation-with-content .main-content {
+/* .dashboard .navigation-with-content .main-content {
   padding: 25px 0px;
-}
-
+} */
 
 .popup .popup__content .done {
   cursor: pointer;
@@ -589,57 +588,56 @@ form .two-col-field:last-child .form-control {
 @media (max-width: 991.98px) {
   form .two-col-field {
     display: block;
-}
-form .form-control {
-  margin-bottom: 30px;
-  display: block;
-  width: 100%;
-}
-form .two-col-field:last-child .form-control {
-  margin-bottom: 30px;
-}
-form .two-col-field:last-child .form-control:last-child {
-  margin-bottom: 0px;
-}
-form .total-amount-full .two-col-field:last-child .form-control {
-  margin-bottom: 0;
-}
-.gst-form button.add-more {
-  padding: 17px 10px 15px;
-  width: 14%;
-  margin: 0px 0 0 1px;
-}
-.non-gst-form .basic-info button.add-more {
-  padding: 17px 10px 15px;
-  width: 14%;
-  margin: 0px 0 0 1px;
-}
-.gst-form .basic-info #select-client {
-  width: 85%;
-}
-.non-gst-form .basic-info #select-client {
-  width: 85%;
-}
-.non-gst-form .add-row-section .two-col-field .form-control:first-child {
-  width: 100%;
-}
-.non-gst-form .total-amount input {
-  max-width: 315px;
-}
+  }
+  form .form-control {
+    margin-bottom: 30px;
+    display: block;
+    width: 100%;
+  }
+  form .two-col-field:last-child .form-control {
+    margin-bottom: 30px;
+  }
+  form .two-col-field:last-child .form-control:last-child {
+    margin-bottom: 0px;
+  }
+  form .total-amount-full .two-col-field:last-child .form-control {
+    margin-bottom: 0;
+  }
+  .gst-form button.add-more {
+    padding: 17px 10px 15px;
+    width: 14%;
+    margin: 0px 0 0 1px;
+  }
+  .non-gst-form .basic-info button.add-more {
+    padding: 17px 10px 15px;
+    width: 14%;
+    margin: 0px 0 0 1px;
+  }
+  .gst-form .basic-info #select-client {
+    width: 85%;
+  }
+  .non-gst-form .basic-info #select-client {
+    width: 85%;
+  }
+  .non-gst-form .add-row-section .two-col-field .form-control:first-child {
+    width: 100%;
+  }
+  .non-gst-form .total-amount input {
+    max-width: 315px;
+  }
 }
 
 @media (max-width: 767.98px) {
   .two-col-content-with-cta {
     display: flex;
-}
+  }
   .two-col-content-with-cta > * {
     width: 100%;
     margin-bottom: 20px;
-}
-.two-col-content-with-cta .invoice-col:last-child {
-  margin-bottom: 0;
-}
-
+  }
+  .two-col-content-with-cta .invoice-col:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -660,124 +658,123 @@ form .total-amount-full .two-col-field:last-child .form-control {
   }
   form .form-control .result {
     width: 16%;
-}
-form input.code {
-  width: 82%;
-}
-form .form-control #unicodeCharacterId {
-  font-size: 14px;
-}
-.gst-form .basic-info #select-client {
-  width: 84%;
-}
-.non-gst-form .basic-info #select-client {
-  width: 84%;
-}
-.gst-form button.add-more {
-  width: 14%;
-  margin: 0px 0 0 3px;
-}
-.non-gst-form button.add-more {
-  width: 14%;
-  margin: 0px 0 0 3px;
-}
-.gst-form .total-amount-full {
-  margin-bottom: 0;
-}
-.non-gst-form .total-amount input {
-  max-width: 230px;
-}
-.two-col-content-with-cta .invoice-col .spacer {
-  padding: 28px;
-}
-.two-col-content-with-cta .invoice-col .spacer .invoice-cta {
-  padding: 18px 50px;
-}
-.two-col-content-with-cta .invoice-col .spacer h4 {
-  font-size: 20px;
-}
-.dataTable-top {
-  max-width: 100%;
-  padding-right: 0;
-  display: block;
-}
-.dataTable-input {
-  margin-left: 65px;
-  max-width: 160px;
-}
-.dataTable-top::after {
-  right: auto;
-  bottom: 15px;
-  left: 3px;
-}
-.dataTable-input {
-  margin-top: 8px;
-}
-.main-content .col-md-12 .add-btn {
-  top: 53px;
-}
-.main-content .col-md-12 .add-btn button {
-  padding: 11px 20px 11px;
-}
-.dataTable-pagination a {
-  font-size: 14px;
-  margin-left: 5px;
-  padding: 8px 10px;
-}
-.dataTable-pagination {
-  justify-content: center;
-}
+  }
+  form input.code {
+    width: 82%;
+  }
+  form .form-control #unicodeCharacterId {
+    font-size: 14px;
+  }
+  .gst-form .basic-info #select-client {
+    width: 84%;
+  }
+  .non-gst-form .basic-info #select-client {
+    width: 84%;
+  }
+  .gst-form button.add-more {
+    width: 14%;
+    margin: 0px 0 0 3px;
+  }
+  .non-gst-form button.add-more {
+    width: 14%;
+    margin: 0px 0 0 3px;
+  }
+  .gst-form .total-amount-full {
+    margin-bottom: 0;
+  }
+  .non-gst-form .total-amount input {
+    max-width: 230px;
+  }
+  .two-col-content-with-cta .invoice-col .spacer {
+    padding: 28px;
+  }
+  .two-col-content-with-cta .invoice-col .spacer .invoice-cta {
+    padding: 18px 50px;
+  }
+  .two-col-content-with-cta .invoice-col .spacer h4 {
+    font-size: 20px;
+  }
+  .dataTable-top {
+    max-width: 100%;
+    padding-right: 0;
+    display: block;
+  }
+  .dataTable-input {
+    margin-left: 65px;
+    max-width: 160px;
+  }
+  .dataTable-top::after {
+    right: auto;
+    bottom: 15px;
+    left: 3px;
+  }
+  .dataTable-input {
+    margin-top: 8px;
+  }
+  .main-content .col-md-12 .add-btn {
+    top: 53px;
+  }
+  .main-content .col-md-12 .add-btn button {
+    padding: 11px 20px 11px;
+  }
+  .dataTable-pagination a {
+    font-size: 14px;
+    margin-left: 5px;
+    padding: 8px 10px;
+  }
+  .dataTable-pagination {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 399.98px) {
-.gst-form .basic-info #select-client {
-  width: 84%;
-}
-.non-gst-form .basic-info #select-client {
-  width: 84%;
-}
-.gst-form button.add-more {
-  padding: 17px 8px 15px;
-  margin: 0px 0 0 1px;
-}
-.non-gst-form button.add-more {
-  padding: 17px 8px 15px;
-  margin: 0px 0 0 1px;
-}
-.non-gst-form .total-amount .title-input {
-  display: block;
-  padding: 20px;
-  margin-bottom: 0;
-}
-.non-gst-form .total-amount .title-input label {
-  margin-bottom: 10px;
-}
-.non-gst-form .total-amount input {
-  max-width: 100%;
-}
+  .gst-form .basic-info #select-client {
+    width: 84%;
+  }
+  .non-gst-form .basic-info #select-client {
+    width: 84%;
+  }
+  .gst-form button.add-more {
+    padding: 17px 8px 15px;
+    margin: 0px 0 0 1px;
+  }
+  .non-gst-form button.add-more {
+    padding: 17px 8px 15px;
+    margin: 0px 0 0 1px;
+  }
+  .non-gst-form .total-amount .title-input {
+    display: block;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+  .non-gst-form .total-amount .title-input label {
+    margin-bottom: 10px;
+  }
+  .non-gst-form .total-amount input {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 380.98px) {
   form .form-control .result {
     width: 18%;
+  }
+  form input.code {
+    width: 80%;
+  }
+  .section-padding {
+    padding: 25px 0px;
+  }
+  form {
+    padding: 30px 10px;
+  }
+  form .form-control {
+    padding: 0 10px;
+  }
+  form label span {
+    font-size: 12px;
+  }
 }
-form input.code {
-  width: 80%;
-}
-.section-padding {
-  padding: 25px 0px;
-}
-form {
-  padding: 30px 10px;
-}
-form .form-control {
-  padding: 0 10px;
-}
-form label span {
-  font-size: 12px;
-}
-}
-
 
 @media (min-width: 1200px) and (max-width: 1400.98px) {
   .gst-form .basic-info #select-client {
@@ -796,41 +793,40 @@ form label span {
   }
 }
 
-
 @media (min-width: 992px) and (max-width: 1199.98px) {
   form input.code {
     width: 82%;
-}
-form .form-control .result {
-  width: 16%;
-}
-.gst-form .basic-info #select-client {
-  width: 83%;
-}
-.non-gst-form .basic-info #select-client {
-  width: 83%;
-}
-.gst-form button.add-more {
-  padding: 17px 10px 15px;
-  width: 13%;
-}
-.non-gst-form button.add-more {
-  padding: 17px 10px 15px;
-  width: 14%;
-}
-.gst-form .total-amount-full {
-  margin-bottom: 6px;
-}
+  }
+  form .form-control .result {
+    width: 16%;
+  }
+  .gst-form .basic-info #select-client {
+    width: 83%;
+  }
+  .non-gst-form .basic-info #select-client {
+    width: 83%;
+  }
+  .gst-form button.add-more {
+    padding: 17px 10px 15px;
+    width: 13%;
+  }
+  .non-gst-form button.add-more {
+    padding: 17px 10px 15px;
+    width: 14%;
+  }
+  .gst-form .total-amount-full {
+    margin-bottom: 6px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-.gst-form button.add-more {
-  padding: 17px 10px 15px;
-}
-.non-gst-form button.add-more {
-  padding: 17px 10px 15px;
-}
-.gst-form .total-amount-full {
-  margin-bottom: 6px;
-}
+  .gst-form button.add-more {
+    padding: 17px 10px 15px;
+  }
+  .non-gst-form button.add-more {
+    padding: 17px 10px 15px;
+  }
+  .gst-form .total-amount-full {
+    margin-bottom: 6px;
+  }
 }
