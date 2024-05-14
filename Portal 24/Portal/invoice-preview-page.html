@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice Preview</title>
+    <link rel="stylesheet" href="css/style.css">
 <style>
     body {
-        font-family: "Roboto", sans-serif;
+        /* font-family: "Roboto", sans-serif; */
         color: #232323;
         line-height: 1.5;
         margin: 0;
         padding: 0;
     }
-    h1, h2, h3, h4, h5, h6 {
-        font-family: "Alice", serif;
+    * {
+        margin: 0;
+        box-sizing: border-box;
     }
+    /* h1, h2, h3, h4, h5, h6 {
+        font-family: "Alice", serif;
+    } */
     img {
         max-width: 100%;
         width: 100%;
@@ -23,36 +28,19 @@
     .bg_white {
         background: #ffffff;
     }
-    .navbar .menu li {
-        display: inline-block;
-        text-decoration: none;
-        padding: 0 6px;
+
+    .heading-section {
+        border-top-left-radius: 11px;
+        border-top-right-radius: 11px;
     }
-    .navbar .menu li a {
-        display: inline-block;
-        text-decoration: none;
-        color: #232323;
-        transition: 0.4s all;
+    .heading-section h2 {
+        font-size: 36px;
     }
-    .navbar .menu li a:hover {
-        color: #848abd;
-    }
-    /* .heading-section {
-        position: relative;
-        z-index: 0;
-    } */
-    /* .heading-section .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: '';
-        width: 100%;
-        background: #000000;
-        z-index: -1;
-        opacity: .3;
-    } */
+    .info-section tr td {
+	width: 50%;
+}
+
+
     .services {
         background: rgba(0,0,0,.03);
         width: 33.33%;
@@ -82,42 +70,7 @@
     table {
         border-spacing: 0px;
     }
-    .counter-section {
-        width: 100%;
-        position: relative;
-        z-index: 0;
-    }
-    .counter {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .counter > * {
-        width: 33.33%;
-        text-align: center;
-    }
-    .counter .item .number {
-        font-size: 32px;
-        color: #ffffff;
-        display: flex;
-        justify-content: center;
-    }
-    .counter-section .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: '';
-        width: 100%;
-        background: #000000;
-        z-index: -1;
-        opacity: .3;
-    }
-    .counter .item p {
-        color: #ffffff;
-        margin: 8px 0 0 0;
-    }
+
     .blog-section {
         padding: 2.5em;
     }
@@ -162,29 +115,7 @@
         box-sizing: border-box;
         width: 50%;
     }
-    .features-section {
-        padding: 1em 2.5em 2.5em;
-    }
-    .features-section .heading {
-        text-align: center;
-        margin-bottom: 22px;
-    }
-    .features-section .heading h2 {
-        margin: 0;
-    }
-    .features-section .box-item .icon-box img {
-        width: 22px;
-        margin-top: 5px;
-    }
-    .features-section .box-item .icon-box {
-        width: 26px;
-        margin-right: 14px;
-    }
-    .features-section .box-item {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
+
     .book-meeting-section {
         padding: 2em 2.5em 2.5em;
         background: #eff3ff;
@@ -200,71 +131,19 @@
         background: #000000;
         padding: 38px 28px;
     }
-    .footer .social-box {
-        display: flex;
-        align-items: center;
-        margin-bottom: 12px;
-    }
-    .footer .social-box .icon a svg {
-        /* width: 19px; */
-        height: 15px;
-        vertical-align: middle;
-        fill: #ffffff;
-    }
-    .footer .social-box .icon a {
-        width: 30px;
-        margin-right: 15px;
-        height: 30px;
-        text-align: center;
-        background: #272727bf;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50px;
-        transition: 0.4s all;
-    }
-    .footer .social-box .icon a:hover {
-        background: #848abd;
-    }
-    .footer .useful-links ul li a {
-        margin-bottom: 14px;
-        display: inline-block;
-        text-decoration: none;
-        color: #ffffff;
-        transition: 0.4s all;
-    }
-    .footer .useful-links ul li a:hover {
-        color: #848abd;
-    }
-    .footer .social-box a {
-        color: #ffffff;
-        text-decoration: none;
-        transition: 0.4s all;
-    }
-    .footer .social-box a:hover {
-        color: #848abd;
-    }
-    .footer h3 {
-        margin-top: 0;
-        color: #ffffff;
-        font-size: 18px;
-    }
-    .footer p {
-        margin-bottom: 0;
-    }
     </style>
 </head>
 <body>
 
 
-<center style="width: 100%;background-color: #f1f1f1;">
-    <div class="container" style="max-width: 970px;width: 100%;margin: 0 auto;">
+<center style="width: 100%;background-color: #F2F2F8;padding: 30px;">
+    <div class="container" style="max-width: 970px;width: 100%;margin:0 auto;background:#ffffff;padding: 50px;border-radius:21px;">
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <tr>
                 <td class="bg_white">
-                    <table width="100%" style="padding: 16px 10px 8px;">
+                    <table width="100%" style="padding: 16px 10px 26px 0;">
                         <tr>
-                            <td class="logo" style="text-align: center;">
+                            <td class="logo">
                                 <a href="#"><img style="width: 140px;" src="images/invoice-logo.svg"></a>
                             </td>
                         </tr>
@@ -273,7 +152,7 @@
             </tr>
     
             <tr>
-                <td class="heading-section" valign="middle" style="background: #848abd;padding: 40px;">
+                <td class="heading-section" valign="middle" style="background: #848abd;padding: 26px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td>
@@ -291,14 +170,14 @@
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td>
-                                <div>
+                                <div class="left">
                                     <p>Code Accelerator Private Limited</p>
                                     <p>104, 1st floor, Manglam Crown Square,Gandhi path, Vaishali Nagar, Jaipur, Rajasthan</p>
                                 </div>
                             </td>
 
                             <td>
-                                <div>
+                                <div class="right">
                                     <ul>
                                         <li>GSTIN : 08AJJCC7027P1Z3</li>
                                         <li>CIN : U72900RJ2021PTC076511</li>
@@ -490,25 +369,22 @@
                         <tr>
                             <td class="bottom-list-section">
                                 <ul>
-                                    <li></li>
+                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
+                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry and has been the industry's standard dummy text</li>
+                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
                                 </ul>
                             </td>
                         </tr>
                     </table>
                 </td>
             </tr>
-    
-    
+
             <tr>
-                <td class="bg_white" valign="middle">
+                <td valign="middle">
                     <table>
                         <tr>
-                            <td class="book-meeting-section">
-                                <div class="content-box">
-                                    <h2>A Team That <span>Works Together</span> To Accomplish Your Business Goals</h2>
-                                    <p>Setting up and growing a business is challenging, especially when you are on your own. Why not work with a team that will remove hurdles from your journey and make success is easy? Our experts come together every day with one simple goal - the growth of your business.</p>
-                                    <a class="btn-primary" href="https://thecodeaccelerator.com/book-a-meeting-with-shubham" style="margin-top: 16px;">Book a time</a>
-                                </div>
+                            <td class="thanks-msg">
+                                Thank You For With Business <a href="javascript:void(0);">With Us</a>
                             </td>
                         </tr>
                     </table>
@@ -523,97 +399,19 @@
                 <td>
                     <table class="footer">
                         <tr>
-                            <td width="33.333%" style="align-content: flex-start;">
-                                <table>
-                                    <tr>
-                                        <td style="text-align: left; padding-right: 10px;">
-                                            <!-- <a class="footer-logo" href="#"><img style="width: 120px;display: inline-block;" src="images/white-logo.png"></a> -->
-                                            <h3>About</h3>
-                                                <p>At Code Accelerator, we don't just code; we craft digital stories. With every pixel and line of code, we're not just building websites, but bridges to your brand's brightest future.</p>
-                                        </td>
-                                    </tr>
-                                </table>
+                            <td class="bg_dark" style="text-align: center;color: rgba(0, 0, 0, .5);">
+                                <a href="javascript:void(0);" style="color: rgba(0,0,0,.8);text-decoration: none;">Download</a>
                             </td>
-    
-                            
-                            <td class="useful-links" width="33.333%" style="align-content: flex-start;">
-                                <table>
-                                    <tr>
-                                        <td style="text-align: left; padding: 0 5px;">
-                                            <h3>Useful Links</h3>
-                                                <ul style="padding-left: 0;list-style: none;">
-                                                <li><a href="#">About Us</a></li>
-                                                <li><a href="#">Graphic</a></li>
-                                                <li><a href="#">Hubspot</a></li>
-                                                <li><a href="#">Contact Us</a></li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </table>
+
+                            <td class="bg_dark cancel-cta" style="text-align: center;color: rgba(0, 0, 0, .5);">
+                                <a href="javascript:void(0);" style="color: rgba(0,0,0,.8);text-decoration: none;">Cancel</a>
                             </td>
-    
-    
-                            <td width="33.333%" style="align-content: flex-start;">
-                                <table>
-                                    <tr>
-                                        <td style="text-align: left; padding-left: 10px;">
-                                            <h3>Follow Us</h3>
-                                            <div class="section">
-                                                <!-- <h4>Follow Us! </h4> -->
-                                                
-                                                <div class="social-box">
-                                                    <div class="icon">
-                                                    <a href="https://www.facebook.com/codeaccelerator08" target="_blank" rel="noopener">
-                                                        <img src="https://19898180.fs1.hubspotusercontent-na1.net/hubfs/19898180/test/facebook.png">
-                                                    </a>
-                                                    </div>
-                                                    <a href="https://www.facebook.com/codeaccelerator08" target="_blank" rel="noopener">Facebook</a>
-                                                </div>
-                                                
-                                                <div class="social-box">
-                                                    <div class="icon">
-                                                    <a href="https://www.linkedin.com/company/code-accelerator/" target="_blank" rel="noopener">
-                                                        <span id="hs_cos_wrapper_footer-module-2_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><g id="LinkedIn In2_layer"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></g></svg></span>
-                                                    </a>
-                                                    </div>
-                                                    <a href="https://www.linkedin.com/company/code-accelerator/" target="_blank" rel="noopener">LinkedIn</a>
-                                                </div>
-                                                
-                                                <div class="social-box">
-                                                    <div class="icon">
-                                                    <a href="https://www.instagram.com/codeaccelerator08/" target="_blank" rel="noopener">
-                                                        <img src="https://19898180.fs1.hubspotusercontent-na1.net/hubfs/19898180/test/insta.png">
-                                                    </a>
-                                                    </div>
-                                                    <a href="https://www.instagram.com/codeaccelerator08/" target="_blank" rel="noopener">Instagram</a>
-                                                </div>
-                                                
-                                                <div class="social-box">
-                                                    <div class="icon">
-                                                    <a href="https://twitter.com/AcceleratorCode" target="_blank" rel="noopener">
-                                                        <img src="https://19898180.fs1.hubspotusercontent-na1.net/hubfs/19898180/test/twitter.png">
-                                                    </a>
-                                                    </div>
-                                                    <a href="https://twitter.com/AcceleratorCode" target="_blank" rel="noopener">Twitter</a>
-                                                </div>
-                                                
-                                                
-                                                </div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-    
                         </tr>
                     </table>
                 </td>
             </tr>
     
-            <tr>
-                <td class="bg_light" style="text-align: center;color: rgba(0, 0, 0, .5);">
-                    <p>No longer want to receive these email? You can <a href="#" style="color: rgba(0,0,0,.8);text-decoration: none;">Unsubscribe here</a></p>
-                </td>
-            </tr>
+            
     
         </table>
     
