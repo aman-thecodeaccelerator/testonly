@@ -317,7 +317,6 @@ form .two-col-field:last-child .form-control {
 }
 
 
-
 .invoice-preview-popup {
   width: 100%;
   height: 100%;
@@ -335,22 +334,21 @@ form .two-col-field:last-child .form-control {
 .invoice-preview-popup.is-visible {
   display: block;
 }
-.invoice-preview-popup .popup-boxt {
+.invoice-preview-popup .popup-box {
   overflow: auto;
-  background: #ffffff;
+  background: #F2F2F8;
   color: #202020;
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 62px 30px;
+  transform: translate(-50%, 4%);
+  padding: 30px;
   text-align: center;
-  border-radius: 15px;
-  max-width: 378px;
+  border-radius: 8px;
 }
-.invoice-preview-popup .popup-box img {
-  width: 82px;
-  margin-bottom: 35px;
+.invoice-preview-popup .popup-box .cancel-cta img {
+  width: 22px;
+  margin-bottom: 0;
 }
 .invoice-preview-popup .popup-box h2 {
   font-size: 22px;
@@ -374,6 +372,11 @@ form .two-col-field:last-child .form-control {
 }
 .invoice-preview-popup .cta-box {
   justify-content: space-between;
+  margin-bottom: 50px;
+}
+.invoice-preview-popup .cta-box h4 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .gst-form .total-amount-full .two-col-field .two-col-field:last-child {
