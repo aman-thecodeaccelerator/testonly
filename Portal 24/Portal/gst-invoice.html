@@ -668,21 +668,23 @@
     </div>
   </section>
 
-  <!-- <div class="invoice-preview-popup">
+  <div class="invoice-preview-popup">
+    <div class="container">
     <div class="popup-box">
       <div class="main">    
 
         <div class="cta-box">
           <h4>Invoice Preview</h4>
-          <a class="close-pdf"><img src="images/close-icon.svg"></a>
+          <a class="cancel-cta"><img src="images/close-icon.svg"></a>
         </div>
-        <div class="invoice-pdf">
-          
+        <div id="invoice-pdf">
+          <iframe width="100%" height="800px" class="pdf-doc" src="images/invoice-test.pdf"></iframe>
         </div>
 
       </div>
     </div>
-  </div> -->
+  </div>
+  </div>
 
 </main>
 <!-- jq cdn -->
@@ -789,7 +791,7 @@ $(document).on("click", ".js-add-row", function() {
     });
 
     $(".cancel-cta").click(function() {
-      $(".confirm-popup").fadeOut();
+      $(".invoice-preview-popup").fadeOut();
     });
   });
 </script>
