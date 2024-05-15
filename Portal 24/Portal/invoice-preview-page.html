@@ -1,137 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invoice Preview</title>
-    <link rel="stylesheet" href="css/style.css">
-<style>
-    body {
-        /* font-family: "Roboto", sans-serif; */
-        color: #232323;
-        line-height: 1.5;
-        margin: 0;
-        padding: 0;
-    }
-    * {
-        margin: 0;
-        box-sizing: border-box;
-    }
-    /* h1, h2, h3, h4, h5, h6 {
-        font-family: "Alice", serif;
-    } */
-    img {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-    }
-    .bg_white {
-        background: #ffffff;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice Preview</title>
+<link rel="stylesheet" href="css/style.css">
 
-    .heading-section {
-        border-top-left-radius: 11px;
-        border-top-right-radius: 11px;
-    }
-    .heading-section h2 {
-        font-size: 36px;
-    }
-    .info-section tr td {
-	width: 50%;
+<style>
+body {
+    /* font-family: "Roboto", sans-serif; */
+    color: #232323;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.bg_white {
+    background: #ffffff;
 }
 
+table tr th {
+	text-align: left;
+	background: #c8c8e2;
+	padding: 12px 30px;
+	border: 1px solid #D5D5D54D;
+}
 
-    .services {
-        background: rgba(0,0,0,.03);
-        width: 33.33%;
-        padding: 0 6px;
-    }
-    .two-col-section {
-        padding: 2.5em;
-    }
-    .two-col-section .heading-box {
-        padding: 10px 10px 10px 25px;
-    }
-    .btn-primary {
-        background: #848abd;
-        border-radius: 25px;
-        color: #fff;
-        display: inline-block;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        padding: 14px 30px;
-        position: relative;
-        text-transform: capitalize;
-        transition: .5s;
-        text-decoration: none;
-    }
-    table {
-        border-spacing: 0px;
-    }
+.heading-section {
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+}
+.heading-section h2 {
+    font-size: 36px;
+    color: #ffffff;
+}
+.info-section tr td {
+	width: 50%;
+    padding: 20px 30px;
+}
+.info-section .left p {
+	max-width: 335px;
+}
+.client-detail td, .invoice-value td, .client-service td {
+	padding: 14px 30px;
+}
+.total-bill-section table tr td {
+	padding: 12px 30px;
+	border-bottom: 3px solid #d9d9d9;
+}
+.bank-details .two-col-section {
+	padding: 30px;
+	color: #ffffff;
+}
+.bank-details table {
+	width: 100%;
+}
 
-    .blog-section {
-        padding: 2.5em;
-    }
-    .blog-section .blog-item .spacer {
-        background: #fff;
-        border-radius: 24px;
-        box-shadow: 4px 4px 20px 0 rgba(0,0,0,.11);
-        margin-top: 20px;
-        overflow: hidden;
-    }
-    .blog-section .blog-item .spacer .text-box h6 {
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: .5px;
-        line-height: 24px;
-        margin-bottom: 8px;
-        margin-top: 20px;
-    }
-    .blog-section .blog-item .spacer .tag-box a {
-        text-decoration: none;
-        background-color: #ebf0ff;
-        border-radius: 24px;
-        color: #466de8;
-        font-size: 10px;
-        font-weight: 500;
-        margin-bottom: 13px;
-        padding: 10px 20px;
-    }
-    .blog-section .content {
-        --bs-gutter-x: 1rem;
-        --bs-gutter-y: 0;
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: calc(var(--bs-gutter-x)/-2);
-        margin-right: calc(var(--bs-gutter-x)/-2);
-        box-sizing: border-box;
-    }
-    .blog-section .content > * {
-        max-width: 100%;
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        box-sizing: border-box;
-        width: 50%;
-    }
+.services {
+    background: rgba(0,0,0,.03);
+    width: 33.33%;
+    padding: 0 6px;
+}
+.two-col-section {
+    padding: 2.5em;
+}
+.two-col-section .heading-box {
+    padding: 10px 10px 10px 25px;
+}
+/* .btn-primary {
+    background: #848abd;
+    border-radius: 25px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 14px 30px;
+    position: relative;
+    text-transform: capitalize;
+    transition: .5s;
+    text-decoration: none;
+} */
+table {
+    border-spacing: 0px;
+}
 
-    .book-meeting-section {
-        padding: 2em 2.5em 2.5em;
-        background: #eff3ff;
-        text-align: center;
-        /* color: #ffffff; */
-    }
-    .book-meeting-section h2 {
-        margin: 0;
-    }
-    table.footer {
-        border-top: 1px solid rgba(0, 0, 0, .05);
-        color: #ffffff;
-        background: #000000;
-        padding: 38px 28px;
-    }
-    </style>
+.blog-section {
+    padding: 2.5em;
+}
+.blog-section .blog-item .spacer {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 4px 4px 20px 0 rgba(0,0,0,.11);
+    margin-top: 20px;
+    overflow: hidden;
+}
+.blog-section .blog-item .spacer .text-box h6 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+.blog-section .blog-item .spacer .tag-box a {
+    text-decoration: none;
+    background-color: #ebf0ff;
+    border-radius: 24px;
+    color: #466de8;
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 13px;
+    padding: 10px 20px;
+}
+.blog-section .content {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--bs-gutter-x)/-2);
+    margin-right: calc(var(--bs-gutter-x)/-2);
+    box-sizing: border-box;
+}
+.blog-section .content > * {
+    max-width: 100%;
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.book-meeting-section {
+    padding: 2em 2.5em 2.5em;
+    background: #eff3ff;
+    text-align: center;
+    /* color: #ffffff; */
+}
+.book-meeting-section h2 {
+    margin: 0;
+}
+table.footer {
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    color: #ffffff;
+    background: #000000;
+    padding: 38px 28px;
+}
+</style>
 </head>
 <body>
 
@@ -166,13 +189,13 @@
             </tr>
     
             <tr>
-                <td class="info-section" valign="middle" style="">
+                <td class="info-section" valign="middle" style="border-color: #D5D5D54D;border-style: solid;border-width: 0 2px 0 2px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td>
                                 <div class="left">
-                                    <p>Code Accelerator Private Limited</p>
-                                    <p>104, 1st floor, Manglam Crown Square,Gandhi path, Vaishali Nagar, Jaipur, Rajasthan</p>
+                                    <p><b>Code Accelerator Private Limited</b></p>
+                                    <p>P.No. 104, 1st floor, Manglam Crown Square, Gandhi path, Vaishali Nagar, Jaipur, Rajasthan</p>
                                 </div>
                             </td>
 
@@ -193,7 +216,7 @@
             </tr>
     
             <tr>
-                <td class="client-detail" valign="middle">
+                <td class="client-detail" valign="middle" style="border-color: #D5D5D54D;border-style: solid;border-width: 0 2px 0 2px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tbody>
                             <tr>
@@ -220,7 +243,7 @@
             </tr>
 
             <tr>
-                <td class="client-service" valign="middle">
+                <td class="client-service" valign="middle" style="border-color: #D5D5D54D;border-style: solid;border-width: 0 2px 0 2px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tbody>
                             <tr>
@@ -242,7 +265,7 @@
             </tr>
 
             <tr>
-                <td class="invoice-value" valign="middle">
+                <td class="invoice-value" valign="middle" style="border-color: #D5D5D54D;border-style: solid;border-width: 0 2px 0 2px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tbody>
 
@@ -299,7 +322,7 @@
     
     
             <tr>
-                <td class="total-bill-section" valign="middle">
+                <td class="total-bill-section" valign="middle" style="border-color: #D5D5D54D;border-style: solid;border-width: 0 2px 0 2px;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                             <td><b>Total Invoice Amount</b></td>
